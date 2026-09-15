@@ -20,7 +20,6 @@ public class Recensione {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idRecensione;
 
-    @Enumerated(EnumType.ORDINAL)
     @Column(name = "voto", nullable = false)
     private VotoRecensione voto;
 
