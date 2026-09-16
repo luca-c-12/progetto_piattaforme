@@ -28,7 +28,7 @@ public class Ordine {
     @Column(name = "subtotale", updatable = false)
     private BigDecimal totalePagato;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_cliente", updatable = false)
     private Cliente cliente;
 

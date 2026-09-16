@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Setter
 public class Cliente extends Utente{
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_carrello")
     private Carrello carrello;
 

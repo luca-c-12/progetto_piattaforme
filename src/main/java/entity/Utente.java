@@ -29,7 +29,7 @@ public abstract class Utente {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "hashedPassword", nullable = false)
+    @Column(name = "hashed_password", nullable = false)
     private String hashedPassword;
 
     @CreationTimestamp

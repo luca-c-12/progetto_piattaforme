@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "recensioni",   uniqueConstraints = {
@@ -18,6 +21,7 @@ public class Recensione {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_recensione")
     private long idRecensione;
 
     @Column(name = "voto", nullable = false)
@@ -31,8 +35,9 @@ public class Recensione {
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
 
-    @Column
+    @Column(name = "testo", length = 4000)
     private String testo;
+
 
     @Version
     private long version;

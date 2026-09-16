@@ -19,12 +19,12 @@ public class RecordCarrello {
     @Column(name = "quantita")
     private int quantita;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_prodotto")
     private Prodotto prodotto;
 
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_carrello")
     @ToString.Exclude
     private Carrello carrello;
