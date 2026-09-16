@@ -13,7 +13,7 @@ public interface OrdineRepository extends JpaRepository<Ordine, Long> {
 
     List<Ordine> findByClienteIdUtente(long idUtente);
 
-    @Query("SELECT o FROM Ordine o JOIN FETCH o.prodottiAcquistati WHERE o.cliente.idUtente = :id")
+    @Query("SELECT DISTINCT o FROM Ordine o JOIN FETCH o.prodottiAcquistati WHERE o.cliente.idUtente = :id")
     List<Ordine> findConRigheByCliente(@Param("id") long id);
 
 }
