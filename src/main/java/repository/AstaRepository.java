@@ -19,5 +19,5 @@ public interface AstaRepository extends JpaRepository<Asta,Long> {
 
     List<Asta> findAllByIsVisibleTrueAndProdottoCategoria(CategoriaProdotto categoria);
 
-    List<Asta> findAllByIsVisibleTrueAndProdotto_NomeContainingIgnoreCase(String nomeProdotto)
+    List<Asta> findAllByIsVisibleTrueAndProdotto_NomeContainingIgnoreCase(String nomeProdotto);
 }

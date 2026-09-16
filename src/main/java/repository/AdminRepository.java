@@ -9,5 +9,4 @@ import java.util.List;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin,Long> {
 
-    List<Admin> findAll();
 }
