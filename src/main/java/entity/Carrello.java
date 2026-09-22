@@ -21,6 +21,9 @@ public class Carrello {
     @OneToMany(mappedBy = "carrello", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<RecordCarrello> prodotti = new ArrayList<>();
 
+    @OneToOne(mappedBy = "carrello")
+    private Cliente cliente;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

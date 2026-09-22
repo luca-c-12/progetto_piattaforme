@@ -1,13 +1,16 @@
 package com.example.progetto_piattaforme;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.persistence.autoconfigure.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EnableJpaRepositories(basePackages = "repository")
+@EntityScan(basePackages = "entity")
 public class ProgettoPiattaformeApplication {
 
     public static void main(String[] args) {
-        //SpringApplication.run(ProgettoPiattaformeApplication.class, args);
+        SpringApplication.run(ProgettoPiattaformeApplication.class, args);
         // Stampa la versione di Java
         System.out.println("Versione Java: " + System.getProperty("java.version"));
 

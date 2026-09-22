@@ -15,7 +15,7 @@ public interface AstaRepository extends JpaRepository<Asta,Long> {
 
     List<Asta> findAllByDataInizioGreaterThanEqual(LocalDateTime data);
 
-    List<Asta> findAllByDataFineLessThanEqual(LocalDateTime adesso);
+    List<Asta> findAllByDataFineLessThanEqual(LocalDateTime data);
 
     List<Asta> findAllByIsVisibleTrueAndProdottoCategoria(CategoriaProdotto categoria);
 
