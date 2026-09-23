@@ -52,8 +52,6 @@ public class OrdineServiceImpl implements OrdineService{
             ordine.getProdottiAcquistati().add(linea);
             Prodotto prodotto = r.getProdotto();
             prodotto.setQuantita(prodotto.getQuantita() - r.getQuantita());
-            if(prodotto.getQuantita() == 0)
-                prodotto.setVisible(false);
             totale = totale.add(r.getProdotto().getPrezzo().multiply(BigDecimal.valueOf(r.getQuantita())));
         }
         if(cliente.getSaldo().compareTo(totale) < 0)

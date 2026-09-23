@@ -46,5 +46,8 @@ public interface AstaRepository extends JpaRepository<Asta,Long> {
 
     boolean existsByProdotto_CodiceProdottoAndIsVisibleTrueAndDataFineAfter(long codiceProdotto, LocalDateTime adesso);
 
+    @Query("SELECT a.idAsta FROM Asta a WHERE a.chiusa = false AND a.dataFine <= :adesso")
+    List<Long> findIdDaChiudere(@Param("adesso") LocalDateTime adesso);
 
+    boolean existsByProdotto_CodiceProdottoAndChiusaFalse(long codiceProdotto);
 }

@@ -24,7 +24,7 @@ public record RecordCarrelloDTO(
                 p.getPrezzo(),
                 r.getQuantita(),
                 subtotale,
-                p.isVisible() && p.getQuantita() >= r.getQuantita() // la quantità richiesta è ancora in magazzino?
+                p.isVisible() && p.getQuantita() >= r.getQuantita()
         );
     }
 }

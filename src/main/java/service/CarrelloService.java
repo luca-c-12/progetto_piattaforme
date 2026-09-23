@@ -1,6 +1,9 @@
 package service;
 
 import dto.CarrelloDTO;
+import dto.request.RigaOspiteRequest;
+
+import java.util.List;
 
 public interface CarrelloService {
 
@@ -13,4 +16,6 @@ public interface CarrelloService {
     CarrelloDTO rimuoviProdotto(long idCliente, long codiceProdotto);
 
     CarrelloDTO svuotaCarrello(long idCliente);
+
+    CarrelloDTO unisciCarrelloOspite(long idCliente, List<RigaOspiteRequest> righeOspite);
 }

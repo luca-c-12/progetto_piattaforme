@@ -1,6 +1,7 @@
 package service;
 
 import dto.CarrelloDTO;
+import dto.request.RigaOspiteRequest;
 import entity.Carrello;
 import entity.Prodotto;
 import entity.RecordCarrello;
@@ -13,6 +14,7 @@ import repository.ProdottoRepository;
 import repository.RecordCarrelloRepository;
 import exception.*;
 
+import java.util.List;
 import java.util.Optional;
 
 import static service.ServiceUtils.verificaGiacenza;
@@ -88,6 +90,30 @@ public class CarrelloServiceImpl implements CarrelloService {
     public CarrelloDTO svuotaCarrello(long idCliente) {
         Carrello carrello = caricaCarrello(idCliente);
         carrello.getProdotti().clear();
+        return CarrelloDTO.from(carrello);
+    }
+
+    @Override
+    @Transactional
+    public CarrelloDTO unisciCarrelloOspite(long idCliente, List<RigaOspiteRequest> righeOspite) {
+        Carrello carrello = caricaCarrello(idCliente);
+
+        for (RigaOspiteRequest r : righeOspite) {
+            Prodotto prodotto = prodottoRepository.findById(r.codiceProdotto()).orElse(null);
+            if (prodotto == null || !prodotto.isInCatalogo())
+                continue;                                   // non più acquistabile: si salta
+
+            RecordCarrello riga = trovaRiga(carrello, r.codiceProdotto()).orElse(null);
+            if (riga == null) {                             // riga nuova: parte da quantità 0
+                riga = new RecordCarrello();
+                riga.setCarrello(carrello);
+                riga.setProdotto(prodotto);
+                carrello.getProdotti().add(riga);
+            }
+
+            riga.setQuantita(Math.min(riga.getQuantita() + r.quantita(), prodotto.getQuantita()));
+        }
+
         return CarrelloDTO.from(carrello);
     }
 

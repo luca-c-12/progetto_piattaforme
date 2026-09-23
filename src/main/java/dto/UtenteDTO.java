@@ -13,7 +13,8 @@ public record UtenteDTO(
         String cognome,
         String email,
         Ruolo ruolo,
-        LocalDateTime dataRegistrazione
+        LocalDateTime dataRegistrazione,
+        boolean isVisible
 ) {
     public static UtenteDTO from(Utente utente) {
 
@@ -23,7 +24,8 @@ public record UtenteDTO(
                 utente.getCognome(),
                 utente.getEmail(),
                 utente.getRuolo(),
-                utente.getDataRegistrazione()
+                utente.getDataRegistrazione(),
+                utente.isVisible()
         );
     }
 }

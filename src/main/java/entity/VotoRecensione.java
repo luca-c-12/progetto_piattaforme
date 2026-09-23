@@ -16,4 +16,10 @@ public enum VotoRecensione {
     public int getValue() {
         return value;
     }
+
+    public static VotoRecensione daValore(int valore) {
+        for (VotoRecensione v : values())
+            if (v.value == valore) return v;
+        throw new IllegalArgumentException("Voto non valido: " + valore);
+    }
 }

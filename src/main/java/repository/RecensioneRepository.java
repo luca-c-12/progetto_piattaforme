@@ -20,5 +20,5 @@ public interface RecensioneRepository extends JpaRepository<Recensione,Long> {
 
     boolean existsByCliente_IdUtenteAndProdotto_CodiceProdotto(long idCliente, long codiceProdotto);
 
-    Optional<Recensione> findByIdRecensioneAndCliente_IdUtente(long idRecensione, long idUtente);
+    Optional<Recensione> findByIdRecensioneAndCliente_IdUtente(long idRecensione, long idCliente);
 }

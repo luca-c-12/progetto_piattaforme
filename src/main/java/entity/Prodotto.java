@@ -48,6 +48,10 @@ public class Prodotto {
         return isVisible && quantita > richiesta;
     }
 
+    public boolean isInCatalogo() {
+        return isVisible && quantita > 0;
+    }
+
     @Version
     private long version;
 

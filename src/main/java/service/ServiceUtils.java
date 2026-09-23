@@ -1,7 +1,9 @@
 package service;
 
 import entity.Prodotto;
+import entity.Utente;
 import exception.QuantitaNonDisponibileException;
+import exception.RisorsaNonTrovataException;
 
 public final class ServiceUtils {
 
