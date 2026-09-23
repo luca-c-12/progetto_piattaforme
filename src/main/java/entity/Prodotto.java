@@ -42,8 +42,10 @@ public class Prodotto {
     private boolean isVisible;
 
 
-    public boolean isAvailable() {
-        return this.quantita > 0;
+    public boolean isAvailable(int richiesta) {
+        if(richiesta <= 0)
+            throw new IllegalArgumentException();
+        return isVisible && quantita > richiesta;
     }
 
     @Version

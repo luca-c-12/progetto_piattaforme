@@ -38,6 +38,9 @@ public class Recensione {
     @Column(name = "testo", length = 4000)
     private String testo;
 
+    @CreationTimestamp
+    @Column(name = "data_recensione", nullable = false, updatable = false)
+    private LocalDateTime dataRecensione;
 
     @Version
     private long version;

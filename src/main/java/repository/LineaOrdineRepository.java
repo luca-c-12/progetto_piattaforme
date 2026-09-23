@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface LineaOrdineRepository extends JpaRepository<LineaOrdine,Long> {
 
-    List<LineaOrdine> findAllByOrdine_IdOrdine(long idOrdine);
+    boolean existsByOrdine_Cliente_IdUtenteAndProdotto_CodiceProdotto(long idUtente, long codiceProdotto);
+
 }

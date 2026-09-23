@@ -12,7 +12,8 @@ public record ProdottoDTO(
         String brand,
         BigDecimal prezzo,
         CategoriaProdotto categoria,
-        boolean disponibile
+        int quantita
+
 ) {
     public static ProdottoDTO from(Prodotto p) {
         return new ProdottoDTO(
@@ -22,7 +23,7 @@ public record ProdottoDTO(
                 p.getBrand(),
                 p.getPrezzo(),
                 p.getCategoria(),
-                p.isAvailable()
+                p.getQuantita()
         );
     }
 }

@@ -3,7 +3,7 @@ package entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -22,12 +22,11 @@ public class Asta {
     @Column(name = "id_asta")
     private long idAsta;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_prodotto", nullable = false)
     private Prodotto prodotto;
 
-    @Column(name = "inizio_asta")
-    @CreationTimestamp
+    @Column(name = "inizio_asta", nullable = false)
     private LocalDateTime dataInizio;
 
     @Column(name = "fine_asta", nullable = false)
@@ -49,6 +48,14 @@ public class Asta {
 
     @Version
     private long version;
+
+    public StatoAsta statoAl(LocalDateTime istante) {
+        if (istante.isBefore(dataInizio))
+            return StatoAsta.PROGRAMMATA;
+        if (istante.isBefore(dataFine))
+            return StatoAsta.IN_CORSO;
+        return StatoAsta.TERMINATA;
+    }
 
     @Override
     public boolean equals(Object o) {

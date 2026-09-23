@@ -15,6 +15,8 @@ import exception.*;
 
 import java.util.Optional;
 
+import static service.ServiceUtils.verificaGiacenza;
+
 
 @Service
 @Transactional(readOnly = true)
@@ -111,10 +113,6 @@ public class CarrelloServiceImpl implements CarrelloService {
                 .orElseThrow(()->new RisorsaNonTrovataException("Prodotto " + codiceProdotto + " non presente nel carrello."));
     }
 
-    private void verificaGiacenza(Prodotto prodotto, int richiesta) {
-        if (prodotto.getQuantita() < richiesta)
-            throw new QuantitaNonDisponibileException("Disponibili solo " + prodotto.getQuantita() + " pezzi di " + prodotto.getNome() + ".");
-    }
 
     private Optional<RecordCarrello> trovaRiga(Carrello carrello, long codiceProdotto) {
         return recordCarrelloRepository

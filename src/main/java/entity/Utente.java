@@ -28,16 +28,21 @@ public abstract class Utente {
 
     @Column(name = "email", unique = true, nullable = false)
     private String email;
-
+/*
     @Column(name = "hashed_password", nullable = false)
     private String hashedPassword;
-
+*/
     @CreationTimestamp
     @Column(name = "data_registrazione", nullable = false, updatable = false)
     private LocalDateTime dataRegistrazione;
 
+    @Column(name = "is_visible")
+    private boolean isVisible;
+
     @Version
     private long version;
+
+    public abstract Ruolo getRuolo();
 
     @Override
     public boolean equals(Object o) {

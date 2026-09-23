@@ -2,6 +2,7 @@ package dto;
 
 import entity.Asta;
 import entity.OffertaAsta;
+import entity.StatoAsta;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public record AstaDTO(
         BigDecimal prezzoBase,
         OffertaAstaDTO offertaMassima, // null se non ci sono ancora offerte
         BigDecimal prezzoCorrente,
-        boolean terminata
+        StatoAsta stato
 ) {
     public static AstaDTO from(Asta a) {
         OffertaAsta max = a.getOffertaMax();
@@ -28,7 +29,7 @@ public record AstaDTO(
                 a.getPrezzoBase(),
                 offertaMassima,
                 prezzoCorrente,
-                LocalDateTime.now().isAfter(a.getDataFine())
+                a.statoAl(LocalDateTime.now())
         );
     }
 }

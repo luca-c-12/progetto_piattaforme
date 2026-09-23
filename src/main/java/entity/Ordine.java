@@ -25,7 +25,7 @@ public class Ordine {
     @CreationTimestamp
     private LocalDateTime dataOrdine;
 
-    @Column(name = "subtotale", updatable = false)
+    @Column(name = "totale", updatable = false)
     private BigDecimal totalePagato;
 
     @ManyToOne(fetch = FetchType.LAZY)

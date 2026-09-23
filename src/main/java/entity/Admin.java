@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @DiscriminatorValue("ADMIN")
 public class Admin extends Utente{
 
-
+    @Override
+    public Ruolo getRuolo() { return Ruolo.ADMIN; }
 
 }

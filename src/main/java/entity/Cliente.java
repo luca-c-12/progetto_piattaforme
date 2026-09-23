@@ -18,14 +18,16 @@ public class Cliente extends Utente{
     @JoinColumn(name = "id_carrello")
     private Carrello carrello;
 
-    @Column(name = "saldo")
-    private BigDecimal saldo;
+    @Column(name = "saldo", nullable = false)
+    private BigDecimal saldo = BigDecimal.ZERO;
 
     @Column(name = "indirizzo")
     private String indirizzo;
 
-    @Column(name = "is_visible")
-    private boolean isVisible;
+    @Override
+    public Ruolo getRuolo() { return Ruolo.CLIENTE; }
+
+
 
 
 }
