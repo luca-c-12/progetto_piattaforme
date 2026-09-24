@@ -1,0 +1,60 @@
+package com.example.progetto_piattaforme.entity;
+
+import jakarta.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "recensioni",   uniqueConstraints = {
+        @UniqueConstraint(
+                name = "unicita_cliente_prodotto", // Nome del vincolo sul database
+                columnNames = {"id_cliente", "id_prodotto"} // I nomi delle colonne fisiche sul DB
+        )
+})
+@Getter
+@Setter
+public class Recensione {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_recensione")
+    private long idRecensione;
+
+    @Column(name = "voto", nullable = false)
+    private VotoRecensione voto;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_prodotto", nullable = false)
+    private Prodotto prodotto;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private Cliente cliente;
+
+    @Column(name = "testo", length = 4000)
+    private String testo;
+
+    @CreationTimestamp
+    @Column(name = "data_recensione", nullable = false, updatable = false)
+    private LocalDateTime dataRecensione;
+
+    @Version
+    private long version;
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Recensione that)) return false;
+        return that.idRecensione != 0 && idRecensione == that.idRecensione;
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
+}

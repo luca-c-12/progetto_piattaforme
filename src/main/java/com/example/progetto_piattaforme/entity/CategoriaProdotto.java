@@ -1,0 +1,21 @@
+package com.example.progetto_piattaforme.entity;
+
+public enum CategoriaProdotto {
+
+    ELETTRONICA,
+    LIBRI,
+    CASA_E_CUCINA,
+    ABBIGLIAMENTO_SCARPE_GIOIELLI,
+    BELLEZZA_E_SALUTE,
+    ALIMENTARI,
+    SPORT_E_TEMPO_LIBERO,
+    GIOCHI_E_GIOCATTOLI,
+    AUTO_E_MOTO,
+    CANCELLERIA_E_UFFICIO,
+    PRODOTTI_PER_ANIMALI,
+    FAI_DA_TE,
+    FILM_E_TV,
+    VIDEOGIOCHI,
+    INFORMATICA,
+    GIARDINO_E_GIARDINAGGIO
+}
