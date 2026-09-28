@@ -2,6 +2,7 @@ package com.example.progetto_piattaforme.service;
 
 import com.example.progetto_piattaforme.dto.OrdineDTO;
 import com.example.progetto_piattaforme.dto.OrdineSintesiDTO;
+import com.example.progetto_piattaforme.dto.request.CheckoutRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -10,7 +11,7 @@ import java.time.LocalDate;
 public interface OrdineService {
 
 
-    OrdineDTO effettuaCheckout(long idCliente);
+    OrdineDTO effettuaCheckout(long idCliente, CheckoutRequest checkoutRequest);
 
     OrdineDTO getOrdine(long idCliente, long idOrdine);
 

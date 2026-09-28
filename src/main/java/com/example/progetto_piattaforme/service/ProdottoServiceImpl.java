@@ -76,6 +76,8 @@ public class ProdottoServiceImpl implements ProdottoService {
     @Override
     @Transactional
     public ProdottoAdminDTO impostaGiacenza(long codiceProdotto, int quantita) {
+        if (astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(codiceProdotto))
+            throw new OperazioneNonValidaException("Non si può modificare la giacenza di un prodotto all'asta.");
         if (quantita < 0)
             throw new OperazioneNonValidaException("Quantità non valida.");
         Prodotto prodotto = caricaProdotto(codiceProdotto);

@@ -56,6 +56,7 @@ public class CarrelloServiceImpl implements CarrelloService {
             riga.setCarrello(carrello);
             carrello.getProdotti().add(riga);
         }
+        carrelloRepository.save(carrello);
         return CarrelloDTO.from(carrello);
     }
 

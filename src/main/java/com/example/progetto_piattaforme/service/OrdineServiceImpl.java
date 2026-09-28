@@ -2,6 +2,8 @@ package com.example.progetto_piattaforme.service;
 
 import com.example.progetto_piattaforme.dto.OrdineDTO;
 import com.example.progetto_piattaforme.dto.OrdineSintesiDTO;
+import com.example.progetto_piattaforme.dto.request.CheckoutRequest;
+import com.example.progetto_piattaforme.dto.request.RigaCheckoutRequest;
 import com.example.progetto_piattaforme.entity.*;
 import com.example.progetto_piattaforme.repository.ClienteRepository;
 import com.example.progetto_piattaforme.repository.OrdineRepository;
@@ -9,6 +11,7 @@ import com.example.progetto_piattaforme.repository.OrdineRepository;
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
 import com.example.progetto_piattaforme.exception.SaldoNonSufficienteException;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,9 +19,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 import static com.example.progetto_piattaforme.service.ServiceUtils.verificaGiacenza;
 
@@ -33,13 +38,14 @@ public class OrdineServiceImpl implements OrdineService{
 
     @Override
     @Transactional
-    public OrdineDTO effettuaCheckout(long idCliente) {
+    public OrdineDTO effettuaCheckout(long idCliente, CheckoutRequest checkoutRequest) {
         Cliente cliente = caricaCliente(idCliente);
         if (cliente.getIndirizzo() == null || cliente.getIndirizzo().isBlank())
             throw new OperazioneNonValidaException("Completa il profilo con l'indirizzo di spedizione.");
         Carrello carrello = cliente.getCarrello();
         if(carrello == null || carrello.getProdotti().isEmpty())
-            throw new OperazioneNonValidaException("nessun prodotto nel carrello");
+            throw new OperazioneNonValidaException("Nessun prodotto nel carrello.");
+        verificaCarrelloVisto(carrello, checkoutRequest.righe());
         Ordine ordine = new Ordine();
         ordine.setCliente(cliente);
         ordine.setIndirizzoSpedizione(cliente.getIndirizzo());
@@ -60,7 +66,7 @@ public class OrdineServiceImpl implements OrdineService{
             totale = totale.add(r.getProdotto().getPrezzo().multiply(BigDecimal.valueOf(r.getQuantita())));
         }
         if(cliente.getSaldo().compareTo(totale) < 0)
-            throw new SaldoNonSufficienteException("il totale dell'ordine eccede il saldo disponibile");
+            throw new SaldoNonSufficienteException("Il totale dell'ordine eccede il saldo disponibile");
         ordine.setTotalePagato(totale);
         carrello.getProdotti().clear();
         cliente.setSaldo(cliente.getSaldo().subtract(totale));
@@ -71,7 +77,7 @@ public class OrdineServiceImpl implements OrdineService{
     @Override
     public OrdineDTO getOrdine(long idCliente, long idOrdine) {
         Ordine ordine = ordineRepository.findByIdOrdineAndCliente_IdUtente(idOrdine, idCliente)
-                .orElseThrow(()->new RisorsaNonTrovataException("ordine non trovato"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato"));
         return OrdineDTO.from(ordine);
     }
 
@@ -94,12 +100,31 @@ public class OrdineServiceImpl implements OrdineService{
     @Override
     public OrdineDTO getOrdineComeAdmin(long idOrdine) {
         Ordine ordine = ordineRepository.findById(idOrdine)
-                .orElseThrow(()->new RisorsaNonTrovataException("ordine non trovato"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato"));
         return OrdineDTO.from(ordine);
     }
 
     private Cliente caricaCliente(long idCliente) {
         return clienteRepository.findConCarrelloByIdUtente(idCliente).
-                orElseThrow(()->new RisorsaNonTrovataException("cliente non trovato."));
+                orElseThrow(()->new RisorsaNonTrovataException("Cliente non trovato."));
+    }
+
+    private void verificaCarrelloVisto(Carrello carrello, List<RigaCheckoutRequest> righeViste) {
+        if (righeViste.size() != carrello.getProdotti().size())
+            throw new OperazioneNonValidaException("Il carrello è cambiato: ricontrollalo prima di pagare.");
+
+        for (RecordCarrello r : carrello.getProdotti()) {
+            RigaCheckoutRequest vista = null;
+            for (RigaCheckoutRequest v : righeViste) {
+                if (v.codiceProdotto() == r.getProdotto().getCodiceProdotto()) {
+                    vista = v;
+                    break;
+                }
+            }
+            if (vista == null
+                    || vista.quantita() != r.getQuantita()
+                    || vista.prezzoUnitario().compareTo(r.getProdotto().getPrezzo()) != 0)
+                throw new OperazioneNonValidaException("Il carrello è cambiato: ricontrollalo prima di pagare.");
+        }
     }
 }

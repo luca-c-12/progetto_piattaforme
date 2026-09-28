@@ -34,7 +34,7 @@ public abstract class Utente {
     @Column(name = "cognome", nullable = false)
     private String cognome;
 
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(name = "email", nullable = false)
     private String email;
 
     @CreationTimestamp

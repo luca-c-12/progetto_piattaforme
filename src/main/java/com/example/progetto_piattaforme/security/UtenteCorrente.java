@@ -5,6 +5,7 @@ import com.example.progetto_piattaforme.entity.Ruolo;
 import com.example.progetto_piattaforme.exception.AccessoNonAutorizzatoException;
 import com.example.progetto_piattaforme.service.UtenteService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.Authentication;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -38,6 +39,10 @@ public class UtenteCorrente {
         String cognome = jwt.getClaimAsString("family_name");
         String keycloakId = jwt.getClaimAsString("sub");
 
-        return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
+        try {
+            return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
+        } catch (DataIntegrityViolationException e) { //due richieste simultanee di GET per l'utente appena creato ed il suo carrello da prate del front end
+            return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
+        }
     }
 }

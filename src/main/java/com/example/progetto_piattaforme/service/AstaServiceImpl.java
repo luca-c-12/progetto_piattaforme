@@ -83,6 +83,8 @@ public class AstaServiceImpl implements AstaService {
             throw new OperazioneNonValidaException("L'offerta deve superare quella attuale.");
         }
         Cliente cliente = caricaCliente(idCliente);
+        if (cliente.getIndirizzo() == null || cliente.getIndirizzo().isBlank())
+            throw new OperazioneNonValidaException("Completa il profilo con l'indirizzo di spedizione prima di fare offerte.");
         if(cliente.getSaldo().compareTo(offertaRequest.importo()) < 0)
             throw new SaldoNonSufficienteException("saldo non sufficiente");
         OffertaAsta offertaAsta = new OffertaAsta();
@@ -110,7 +112,7 @@ public class AstaServiceImpl implements AstaService {
         else
             inizio = richiesta.dataInizio();
         if(richiesta.prezzoBase().compareTo(BigDecimal.ZERO) <= 0 ||
-                inizio.isAfter(richiesta.dataFine()))
+                !inizio.isBefore(richiesta.dataFine()))
             throw new OperazioneNonValidaException("richiesta malformata");
         Prodotto prodotto = caricaProdotto(richiesta.codiceProdotto());
         if(astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(richiesta.codiceProdotto()))
@@ -216,7 +218,7 @@ public class AstaServiceImpl implements AstaService {
     }
 
     private Prodotto caricaProdotto(long codiceProdotto) {
-        Prodotto prodotto = prodottoRepository.findById(codiceProdotto)
+        Prodotto prodotto = prodottoRepository.findByIdPerAggiornamento(codiceProdotto)
                 .orElseThrow(() -> new RisorsaNonTrovataException("Prodotto inesistente"));
         if (prodotto.isVisible() || prodotto.getQuantita() == 0)
             throw new OperazioneNonValidaException("Solo prodotti fuori catalogo e con pezzi disponibili.");

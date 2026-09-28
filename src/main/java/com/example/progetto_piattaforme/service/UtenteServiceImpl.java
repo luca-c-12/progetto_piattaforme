@@ -112,6 +112,9 @@ public class UtenteServiceImpl implements UtenteService{
         if(utente != null) {
             if(!utente.isVisible())
                 utente.setVisible(true);
+            utente.setNome(nome);
+            utente.setCognome(cognome);
+            utente.setEmail(email);
             return utente.getIdUtente();
         }
 

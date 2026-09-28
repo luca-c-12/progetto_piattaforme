@@ -34,6 +34,9 @@ public class RecordCarrello {
     @ToString.Exclude
     private Carrello carrello;
 
+    @Version
+    private long version;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
