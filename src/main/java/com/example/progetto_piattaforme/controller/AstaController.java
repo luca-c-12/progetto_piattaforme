@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,6 +44,7 @@ public class AstaController {
     }
 
     @GetMapping("/aste/mie-offerte")
+    @PreAuthorize("hasRole('CLIENTE')")
     public Page<OffertaAstaDTO> getOfferteCliente(@PageableDefault(size = 20) Pageable paginazione) {
         return astaService.getOfferteCliente(utenteCorrente.id(), paginazione);
     }
@@ -60,18 +62,21 @@ public class AstaController {
 
     @PostMapping("/aste/{idAsta}/offerte")
     @ResponseStatus(HttpStatus.CREATED)
+    @PreAuthorize("hasRole('CLIENTE')")
     public AstaDTO faiOfferta(@PathVariable long idAsta, @Valid @RequestBody OffertaRequest richiesta) {
         return astaService.faiOfferta(utenteCorrente.id(), idAsta, richiesta);
     }
 
     @PostMapping("/admin/aste")
     @ResponseStatus(HttpStatus.CREATED)
+    @PreAuthorize("hasRole('ADMIN')")
     public AstaDTO creaAsta(@Valid @RequestBody CreaAstaRequest richiesta) {
         return astaService.creaAsta(richiesta);
     }
 
     @DeleteMapping("/admin/aste/{idAsta}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('ADMIN')")
     public void annullaAsta(@PathVariable long idAsta) {
         astaService.annullaAsta(idAsta);
     }

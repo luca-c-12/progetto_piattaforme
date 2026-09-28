@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,46 +32,40 @@ public class UtenteController {
     private final UtenteService utenteService;
     private final UtenteCorrente utenteCorrente;
 
-    @PostMapping("/utenti")
-    @ResponseStatus(HttpStatus.CREATED)
-    public ClienteDTO registraCliente(@Valid @RequestBody RegistrazioneClienteRequest richiesta) {
-        return utenteService.registraCliente(richiesta);
-    }
-
     @GetMapping("/utenti/me")
+    @PreAuthorize("hasRole('CLIENTE')")
     public ClienteDTO getProfiloCliente() {
         return utenteService.getProfiloCliente(utenteCorrente.id());
     }
 
     @PutMapping("/utenti/me")
+    @PreAuthorize("hasRole('CLIENTE')")
     public ClienteDTO aggiornaProfilo(@Valid @RequestBody AggiornaProfiloRequest richiesta) {
         return utenteService.aggiornaProfilo(utenteCorrente.id(), richiesta);
     }
 
     @PostMapping("/utenti/me/ricarica")
+    @PreAuthorize("hasRole('CLIENTE')")
     public ClienteDTO ricaricaSaldo(@Valid @RequestBody RicaricaSaldoRequest richiesta) {
         return utenteService.ricaricaSaldo(utenteCorrente.id(), richiesta);
     }
 
+    @DeleteMapping("/utenti/me")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('CLIENTE')")
+    public void disattivaAccount() {
+        utenteService.disattivaUtente(utenteCorrente.id());
+    }
+
     @GetMapping("/admin/utenti")
+    @PreAuthorize("hasRole('ADMIN')")
     public Page<UtenteDTO> getUtenti(@PageableDefault(size = 20, sort = "cognome") Pageable paginazione) {
         return utenteService.getUtenti(paginazione);
     }
 
     @GetMapping("/admin/utenti/{idUtente}")
+    @PreAuthorize("hasRole('ADMIN')")
     public UtenteDTO getUtente(@PathVariable long idUtente) {
         return utenteService.getUtente(idUtente);
-    }
-
-    @PostMapping("/admin/utenti")
-    @ResponseStatus(HttpStatus.CREATED)
-    public UtenteDTO creaAdmin(@Valid @RequestBody RegistrazioneAdminRequest richiesta) {
-        return utenteService.creaAdmin(richiesta);
-    }
-
-    @DeleteMapping("/admin/utenti/{idUtente}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void disattivaUtente(@PathVariable long idUtente) {
-        utenteService.disattivaUtente(idUtente);
     }
 }

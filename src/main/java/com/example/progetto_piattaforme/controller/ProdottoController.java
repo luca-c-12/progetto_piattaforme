@@ -13,17 +13,20 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import com.example.progetto_piattaforme.service.ProdottoService;
 
 
 @RestController
 @RequiredArgsConstructor
+@PreAuthorize("hasRole('ADMIN')")
 public class ProdottoController {
 
     private final ProdottoService prodottoService;
 
     @GetMapping("/prodotti")
+    @PreAuthorize("permitAll()")
     public Page<ProdottoDTO> cercaProdotti(@RequestParam(required = false) CategoriaProdotto categoria,
                                            @RequestParam(required = false) String brand,
                                            @RequestParam(required = false) String nome,
@@ -33,6 +36,7 @@ public class ProdottoController {
 
 
     @GetMapping("/prodotti/{codiceProdotto}")
+    @PreAuthorize("permitAll()")
     public ProdottoDTO getProdotto(@PathVariable long codiceProdotto) {
         return prodottoService.getProdotto(codiceProdotto);
     }

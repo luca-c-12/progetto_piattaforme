@@ -13,7 +13,6 @@ public class ChiusuraAsteJob {
 
     private final AstaService astaService;
 
-    /** Parte un minuto dopo la fine dell'esecuzione precedente. */
     @Scheduled(fixedDelay = 60_000)
     public void chiudiAsteTerminate() {
         for (Long idAsta : astaService.idAsteDaChiudere()) {

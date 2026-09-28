@@ -10,18 +10,21 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import com.example.progetto_piattaforme.security.UtenteCorrente;
 import com.example.progetto_piattaforme.service.RecensioneService;
 
 @RestController
 @RequiredArgsConstructor
+@PreAuthorize("hasRole('CLIENTE')")
 public class RecensioneController {
 
     private final RecensioneService recensioneService;
     private final UtenteCorrente utenteCorrente;
 
     @GetMapping("/prodotti/{codiceProdotto}/recensioni")
+    @PreAuthorize("permitAll()")
     public Page<RecensioneDTO> getRecensioniProdotto(@PathVariable long codiceProdotto,
                                                      @PageableDefault(size = 10, sort = "dataRecensione", direction = Sort.Direction.DESC) Pageable paginazione) {
         return recensioneService.getRecensioniProdotto(codiceProdotto, paginazione);
@@ -52,6 +55,7 @@ public class RecensioneController {
 
     @DeleteMapping("/admin/recensioni/{idRecensione}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('ADMIN')")
     public void eliminaRecensioneComeAdmin(@PathVariable long idRecensione) {
         recensioneService.eliminaRecensioneComeAdmin(idRecensione);
     }

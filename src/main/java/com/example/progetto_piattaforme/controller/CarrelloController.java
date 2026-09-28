@@ -6,12 +6,14 @@ import com.example.progetto_piattaforme.dto.request.MergeCarrelloRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import com.example.progetto_piattaforme.security.UtenteCorrente;
 import com.example.progetto_piattaforme.service.CarrelloService;
 
 @RestController
 @RequiredArgsConstructor
+@PreAuthorize("hasRole('CLIENTE')")
 public class CarrelloController {
 
     private final CarrelloService carrelloService;

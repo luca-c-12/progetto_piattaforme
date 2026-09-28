@@ -35,6 +35,8 @@ public class OrdineServiceImpl implements OrdineService{
     @Transactional
     public OrdineDTO effettuaCheckout(long idCliente) {
         Cliente cliente = caricaCliente(idCliente);
+        if (cliente.getIndirizzo() == null || cliente.getIndirizzo().isBlank())
+            throw new OperazioneNonValidaException("Completa il profilo con l'indirizzo di spedizione.");
         Carrello carrello = cliente.getCarrello();
         if(carrello == null || carrello.getProdotti().isEmpty())
             throw new OperazioneNonValidaException("nessun prodotto nel carrello");

@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,21 +30,25 @@ public class OrdineController {
 
     @PostMapping("/ordini")
     @ResponseStatus(HttpStatus.CREATED)
+    @PreAuthorize("hasRole('CLIENTE')")
     public OrdineDTO effettuaCheckout() {
         return ordineService.effettuaCheckout(utenteCorrente.id());
     }
 
     @GetMapping("/ordini")
+    @PreAuthorize("hasRole('CLIENTE')")
     public Page<OrdineSintesiDTO> getOrdiniCliente(@PageableDefault(size = 10) Pageable paginazione) {
         return ordineService.getOrdiniCliente(utenteCorrente.id(), paginazione);
     }
 
     @GetMapping("/ordini/{idOrdine}")
+    @PreAuthorize("hasRole('CLIENTE')")
     public OrdineDTO getOrdine(@PathVariable long idOrdine) {
         return ordineService.getOrdine(utenteCorrente.id(), idOrdine);
     }
 
     @GetMapping("/admin/ordini")
+    @PreAuthorize("hasRole('ADMIN')")
     public Page<OrdineSintesiDTO> getTuttiGliOrdini(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dal,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate al,
@@ -52,6 +57,7 @@ public class OrdineController {
     }
 
     @GetMapping("/admin/ordini/{idOrdine}")
+    @PreAuthorize("hasRole('ADMIN')")
     public OrdineDTO getOrdineComeAdmin(@PathVariable long idOrdine) {
         return ordineService.getOrdineComeAdmin(idOrdine);
     }

@@ -9,6 +9,10 @@ import org.springframework.dao.PessimisticLockingFailureException;
 import org.springframework.data.core.PropertyReferenceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -66,5 +70,14 @@ public class GestoreEccezioni extends ResponseEntityExceptionHandler {
     public ProblemDetail bloccoConcorrente(PessimisticLockingFailureException e) {
         return ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT,
                 "Operazione in conflitto con un'altra in corso. Riprova.");
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ProblemDetail accessoNegato(AccessDeniedException e) {
+        Authentication autenticazione = SecurityContextHolder.getContext().getAuthentication();
+        if (autenticazione == null || autenticazione instanceof AnonymousAuthenticationToken)
+            throw e;
+        return ProblemDetail.forStatusAndDetail(HttpStatus.FORBIDDEN,
+                "Si sta tentando l'accesso ad una risorsa per la quale non si ha l'autorizzazione.");
     }
 }

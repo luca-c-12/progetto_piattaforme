@@ -8,7 +8,12 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "utenti")
+@Table(name = "utenti", uniqueConstraints = {
+        @UniqueConstraint(
+                name = "unicita_id_keycloak", // Nome del vincolo sul database
+                columnNames = {"id_keycloak"} // I nomi delle colonne fisiche sul DB
+        )
+})
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "ruolo", discriminatorType = DiscriminatorType.STRING)
 @Getter
@@ -20,6 +25,9 @@ public abstract class Utente {
     @Column(name = "id_utente")
     private long idUtente;
 
+    @Column(name = "id_keycloak", nullable = false, updatable = false)
+    private String keycloakId;
+
     @Column(name = "nome", nullable = false)
     private String nome;
 
@@ -28,10 +36,7 @@ public abstract class Utente {
 
     @Column(name = "email", unique = true, nullable = false)
     private String email;
-/*
-    @Column(name = "hashed_password", nullable = false)
-    private String hashedPassword;
-*/
+
     @CreationTimestamp
     @Column(name = "data_registrazione", nullable = false, updatable = false)
     private LocalDateTime dataRegistrazione;

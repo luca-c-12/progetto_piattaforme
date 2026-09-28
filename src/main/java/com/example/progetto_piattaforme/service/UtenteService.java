@@ -6,6 +6,7 @@ import com.example.progetto_piattaforme.dto.request.AggiornaProfiloRequest;
 import com.example.progetto_piattaforme.dto.request.RegistrazioneAdminRequest;
 import com.example.progetto_piattaforme.dto.request.RegistrazioneClienteRequest;
 import com.example.progetto_piattaforme.dto.request.RicaricaSaldoRequest;
+import com.example.progetto_piattaforme.entity.Ruolo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -28,4 +29,6 @@ public interface UtenteService {
     void disattivaUtente(long idUtente);
 
     Page<UtenteDTO> getUtenti(Pageable paginazione);
+
+    long trovaOCrea(String keycloakId, String email, String nome, String cognome, Ruolo ruolo);
 }

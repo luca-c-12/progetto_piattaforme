@@ -1,35 +1,43 @@
 package com.example.progetto_piattaforme.security;
 
+import com.example.progetto_piattaforme.entity.Ruolo;
+
 import com.example.progetto_piattaforme.exception.AccessoNonAutorizzatoException;
-import com.example.progetto_piattaforme.repository.UtenteRepository;
-import jakarta.servlet.http.HttpServletRequest;
+import com.example.progetto_piattaforme.service.UtenteService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class UtenteCorrente {
 
-    private static final String HEADER = "X-Id-Utente";
+    private final UtenteService utenteService;
 
-    private final HttpServletRequest richiesta;
-    private final UtenteRepository utenteRepository;
 
     public long id() {
-        long id = leggiId();
-        if (!utenteRepository.existsByIdUtenteAndIsVisibleTrue(id))
-            throw new AccessoNonAutorizzatoException("Utente inesistente o disattivato.");
-        return id;
-    }
+        Authentication autenticazione = SecurityContextHolder.getContext().getAuthentication();
+        if (!(autenticazione instanceof JwtAuthenticationToken tokenAutenticato))
+            throw new AccessoNonAutorizzatoException("Utente non identificato.");
 
-    private long leggiId() {
-        String valore = richiesta.getHeader(HEADER);
-        if (valore == null || valore.isBlank())
-            throw new AccessoNonAutorizzatoException("Utente non identificato.");
-        try {
-            return Long.parseLong(valore.trim());
-        } catch (NumberFormatException e) {
-            throw new AccessoNonAutorizzatoException("Utente non identificato.");
-        }
+        Jwt jwt = tokenAutenticato.getToken();
+        Ruolo ruolo;
+
+        if (tokenAutenticato.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN")))
+            ruolo = Ruolo.ADMIN;
+        else
+            ruolo = Ruolo.CLIENTE;
+
+        String email = jwt.getClaimAsString("email");
+        String nome = jwt.getClaimAsString("given_name");
+        String cognome = jwt.getClaimAsString("family_name");
+        String keycloakId = jwt.getClaimAsString("sub");
+
+        return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
     }
 }
