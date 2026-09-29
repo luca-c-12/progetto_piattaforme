@@ -1,4 +1,16 @@
 services:
+
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+
   keycloak:
     image: quay.io/keycloak/keycloak:26.7.4
     command: start-dev
@@ -12,3 +24,4 @@ services:
 
 volumes:
   keycloak-data:
+  postgres-data:

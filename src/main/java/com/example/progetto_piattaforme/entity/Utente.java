@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "utenti", uniqueConstraints = {
         @UniqueConstraint(
-                name = "unicita_id_keycloak", // Nome del vincolo sul database
-                columnNames = {"id_keycloak"} // I nomi delle colonne fisiche sul DB
+                name = "unicita_id_keycloak",
+                columnNames = {"id_keycloak"}
         )
 })
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

@@ -8,8 +8,8 @@ import lombok.ToString;
 @Entity
 @Table(name = "prodotti_carrello", uniqueConstraints = {
         @UniqueConstraint(
-                name = "unicita_record_prodotto", // Nome del vincolo sul database
-                columnNames = {"id_prodotto", "id_carrello"} // I nomi delle colonne fisiche sul DB
+                name = "unicita_record_prodotto",
+                columnNames = {"id_prodotto", "id_carrello"}
         )
 })
 @Getter

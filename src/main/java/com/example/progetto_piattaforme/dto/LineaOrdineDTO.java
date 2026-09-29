@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public record LineaOrdineDTO(
         long idLineaOrdine,
-        Long codiceProdotto, // Long e non long: il prodotto potrebbe non esistere più
+        Long codiceProdotto, // si pone a null se il prodotto non esiste
         String nomeProdotto,
         BigDecimal prezzoUnitario,
         int quantita,
@@ -14,7 +14,7 @@ public record LineaOrdineDTO(
 ) {
     public static LineaOrdineDTO from(LineaOrdine l) {
         Long codice = l.getProdotto() != null ? l.getProdotto().getCodiceProdotto() : null;
-        // nome e prezzo presi dallo snapshot salvato nella linea, NON dal Prodotto attuale
+        // nome e prezzo presi dallo snapshot salvato nella linea e NON dal prodotto attuale
         return new LineaOrdineDTO(
                 l.getIdLineaOrdine(),
                 codice,

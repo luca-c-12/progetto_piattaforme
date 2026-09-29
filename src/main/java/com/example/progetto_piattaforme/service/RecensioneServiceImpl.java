@@ -8,15 +8,15 @@ import com.example.progetto_piattaforme.entity.Recensione;
 import com.example.progetto_piattaforme.entity.VotoRecensione;
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
+import com.example.progetto_piattaforme.repository.ClienteRepository;
+import com.example.progetto_piattaforme.repository.LineaOrdineRepository;
+import com.example.progetto_piattaforme.repository.ProdottoRepository;
+import com.example.progetto_piattaforme.repository.RecensioneRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.progetto_piattaforme.repository.ClienteRepository;
-import com.example.progetto_piattaforme.repository.LineaOrdineRepository;
-import com.example.progetto_piattaforme.repository.ProdottoRepository;
-import com.example.progetto_piattaforme.repository.RecensioneRepository;
 
 @Service
 @Transactional(readOnly = true)
@@ -100,7 +100,7 @@ public class RecensioneServiceImpl implements RecensioneService {
 
     private Prodotto caricaProdotto(long codiceProdotto) {
         return prodottoRepository.findById(codiceProdotto)
-                .orElseThrow(()->new RisorsaNonTrovataException("prodotto inesistente"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Prodotto non trovato."));
     }
 
 

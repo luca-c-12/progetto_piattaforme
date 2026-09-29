@@ -19,7 +19,7 @@ public record RecensioneDTO(
                 r.getProdotto().getCodiceProdotto(),
                 r.getCliente().getIdUtente(),
                 OffertaAstaDTO.nomePubblico(r.getCliente()),
-                r.getVoto().getValue(), // valore numerico
+                r.getVoto().getValue(),
                 r.getTesto(),
                 r.getDataRecensione()
         );

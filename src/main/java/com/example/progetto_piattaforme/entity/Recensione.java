@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "recensioni",   uniqueConstraints = {
         @UniqueConstraint(
-                name = "unicita_cliente_prodotto", // Nome del vincolo sul database
-                columnNames = {"id_cliente", "id_prodotto"} // I nomi delle colonne fisiche sul DB
+                name = "unicita_cliente_prodotto",
+                columnNames = {"id_cliente", "id_prodotto"}
         )
 })
 @Getter

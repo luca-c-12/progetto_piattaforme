@@ -5,20 +5,16 @@ import com.example.progetto_piattaforme.dto.OrdineSintesiDTO;
 import com.example.progetto_piattaforme.dto.request.CheckoutRequest;
 import com.example.progetto_piattaforme.dto.request.RigaCheckoutRequest;
 import com.example.progetto_piattaforme.entity.*;
-import com.example.progetto_piattaforme.repository.ClienteRepository;
-import com.example.progetto_piattaforme.repository.OrdineRepository;
-
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
 import com.example.progetto_piattaforme.exception.SaldoNonSufficienteException;
-
+import com.example.progetto_piattaforme.repository.ClienteRepository;
+import com.example.progetto_piattaforme.repository.OrdineRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -66,7 +62,7 @@ public class OrdineServiceImpl implements OrdineService{
             totale = totale.add(r.getProdotto().getPrezzo().multiply(BigDecimal.valueOf(r.getQuantita())));
         }
         if(cliente.getSaldo().compareTo(totale) < 0)
-            throw new SaldoNonSufficienteException("Il totale dell'ordine eccede il saldo disponibile");
+            throw new SaldoNonSufficienteException("Il totale dell'ordine eccede il saldo disponibile.");
         ordine.setTotalePagato(totale);
         carrello.getProdotti().clear();
         cliente.setSaldo(cliente.getSaldo().subtract(totale));
@@ -77,7 +73,7 @@ public class OrdineServiceImpl implements OrdineService{
     @Override
     public OrdineDTO getOrdine(long idCliente, long idOrdine) {
         Ordine ordine = ordineRepository.findByIdOrdineAndCliente_IdUtente(idOrdine, idCliente)
-                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato."));
         return OrdineDTO.from(ordine);
     }
 
@@ -100,7 +96,7 @@ public class OrdineServiceImpl implements OrdineService{
     @Override
     public OrdineDTO getOrdineComeAdmin(long idOrdine) {
         Ordine ordine = ordineRepository.findById(idOrdine)
-                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Ordine non trovato."));
         return OrdineDTO.from(ordine);
     }
 

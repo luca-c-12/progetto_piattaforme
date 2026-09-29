@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 public record CreaAstaRequest(
         @Positive long codiceProdotto,
-        @Future LocalDateTime dataInizio,          // null = parte subito
+        @Future LocalDateTime dataInizio, // null = parte subito
         @NotNull @Future LocalDateTime dataFine,
         @NotNull @Positive @Digits(integer = 8, fraction = 2) BigDecimal prezzoBase
 ) { }

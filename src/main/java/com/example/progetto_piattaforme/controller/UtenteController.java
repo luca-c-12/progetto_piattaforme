@@ -4,8 +4,6 @@ package com.example.progetto_piattaforme.controller;
 import com.example.progetto_piattaforme.dto.ClienteDTO;
 import com.example.progetto_piattaforme.dto.UtenteDTO;
 import com.example.progetto_piattaforme.dto.request.AggiornaProfiloRequest;
-import com.example.progetto_piattaforme.dto.request.RegistrazioneAdminRequest;
-import com.example.progetto_piattaforme.dto.request.RegistrazioneClienteRequest;
 import com.example.progetto_piattaforme.dto.request.RicaricaSaldoRequest;
 import com.example.progetto_piattaforme.security.UtenteCorrente;
 import com.example.progetto_piattaforme.service.UtenteService;
@@ -16,14 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor

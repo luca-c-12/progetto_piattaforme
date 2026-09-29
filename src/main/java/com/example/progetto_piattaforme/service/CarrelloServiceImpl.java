@@ -7,13 +7,11 @@ import com.example.progetto_piattaforme.entity.Prodotto;
 import com.example.progetto_piattaforme.entity.RecordCarrello;
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
-import lombok.RequiredArgsConstructor;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.example.progetto_piattaforme.repository.CarrelloRepository;
 import com.example.progetto_piattaforme.repository.ProdottoRepository;
-import com.example.progetto_piattaforme.repository.RecordCarrelloRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +25,6 @@ import static com.example.progetto_piattaforme.service.ServiceUtils.verificaGiac
 public class CarrelloServiceImpl implements CarrelloService {
 
     private final CarrelloRepository carrelloRepository;
-    private final RecordCarrelloRepository recordCarrelloRepository;
     private final ProdottoRepository prodottoRepository;
 
     @Override
@@ -64,7 +61,7 @@ public class CarrelloServiceImpl implements CarrelloService {
     @Transactional
     public CarrelloDTO aggiornaQuantita(long idCliente, long codiceProdotto, int quantita) {
         if (quantita < 0) //es. su amazon se decremento fino a zero il prodotto viene rimosso dal carrello
-            throw new OperazioneNonValidaException("Inserire una quantita valida.");
+            throw new OperazioneNonValidaException("Inserire una quantità valida.");
 
         if(quantita == 0)
             return rimuoviProdotto(idCliente, codiceProdotto);
@@ -103,10 +100,10 @@ public class CarrelloServiceImpl implements CarrelloService {
         for (RigaOspiteRequest r : righeOspite) {
             Prodotto prodotto = prodottoRepository.findById(r.codiceProdotto()).orElse(null);
             if (prodotto == null || !prodotto.isInCatalogo())
-                continue;                                   // non più acquistabile: si salta
+                continue;
 
             RecordCarrello riga = trovaRiga(carrello, r.codiceProdotto()).orElse(null);
-            if (riga == null) {                             // riga nuova: parte da quantità 0
+            if (riga == null) { // riga nuova
                 riga = new RecordCarrello();
                 riga.setCarrello(carrello);
                 riga.setProdotto(prodotto);

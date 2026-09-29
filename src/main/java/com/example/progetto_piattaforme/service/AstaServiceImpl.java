@@ -5,17 +5,15 @@ import com.example.progetto_piattaforme.dto.OffertaAstaDTO;
 import com.example.progetto_piattaforme.dto.request.CreaAstaRequest;
 import com.example.progetto_piattaforme.dto.request.OffertaRequest;
 import com.example.progetto_piattaforme.entity.*;
-import com.example.progetto_piattaforme.repository.*;
-
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
 import com.example.progetto_piattaforme.exception.SaldoNonSufficienteException;
+import com.example.progetto_piattaforme.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -75,7 +73,7 @@ public class AstaServiceImpl implements AstaService {
         Asta asta = caricaAstaPerAggiornamento(idAsta);
         LocalDateTime adesso = LocalDateTime.now();
         if (!asta.isVisible() || asta.statoAl(adesso) != StatoAsta.IN_CORSO)
-            throw new OperazioneNonValidaException("si possono fare offerte solo per aste in corso");
+            throw new OperazioneNonValidaException("Si possono fare offerte solo per aste in corso.");
         if (asta.getOffertaMax() == null) {
             if (offertaRequest.importo().compareTo(asta.getPrezzoBase()) < 0)
                 throw new OperazioneNonValidaException("Offerta inferiore al prezzo base.");
@@ -86,7 +84,7 @@ public class AstaServiceImpl implements AstaService {
         if (cliente.getIndirizzo() == null || cliente.getIndirizzo().isBlank())
             throw new OperazioneNonValidaException("Completa il profilo con l'indirizzo di spedizione prima di fare offerte.");
         if(cliente.getSaldo().compareTo(offertaRequest.importo()) < 0)
-            throw new SaldoNonSufficienteException("saldo non sufficiente");
+            throw new SaldoNonSufficienteException("Saldo non sufficiente.");
         OffertaAsta offertaAsta = new OffertaAsta();
         offertaAsta.setAsta(asta);
         offertaAsta.setCliente(cliente);
@@ -113,10 +111,10 @@ public class AstaServiceImpl implements AstaService {
             inizio = richiesta.dataInizio();
         if(richiesta.prezzoBase().compareTo(BigDecimal.ZERO) <= 0 ||
                 !inizio.isBefore(richiesta.dataFine()))
-            throw new OperazioneNonValidaException("richiesta malformata");
+            throw new OperazioneNonValidaException("Prezzo base non valido o data di fine non successiva all'inizio.");
         Prodotto prodotto = caricaProdotto(richiesta.codiceProdotto());
         if(astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(richiesta.codiceProdotto()))
-            throw new OperazioneNonValidaException("esiste gia un'asta attiva/programmata per questo prodotto");
+            throw new OperazioneNonValidaException("Esiste già un'asta attiva o programmata per questo prodotto.");
         Asta asta = new Asta();
         asta.setProdotto(prodotto);
         asta.setPrezzoBase(richiesta.prezzoBase());
@@ -131,14 +129,14 @@ public class AstaServiceImpl implements AstaService {
     @Override
     @Transactional
     public void annullaAsta(long idAsta) {
-        Asta asta = caricaAsta(idAsta);
+        Asta asta = caricaAstaPerAggiornamento(idAsta);
         LocalDateTime adesso = LocalDateTime.now();
         if(asta.statoAl(adesso) != StatoAsta.TERMINATA) {
             asta.setVisible(false);
             asta.setChiusa(true);
             asta.setVincitore(null);
         }else
-            throw new OperazioneNonValidaException("impossibile annullare un'asta gia conclusa");
+            throw new OperazioneNonValidaException("Impossibile annullare un'asta già conclusa.");
     }
 
     @Override
@@ -198,7 +196,7 @@ public class AstaServiceImpl implements AstaService {
 
             astaRepository.save(asta);
         }else
-            throw new OperazioneNonValidaException("impossibile chiudere un'asta non terminata");
+            throw new OperazioneNonValidaException("Impossibile chiudere un'asta non terminata.");
 
     }
 
@@ -219,7 +217,7 @@ public class AstaServiceImpl implements AstaService {
 
     private Prodotto caricaProdotto(long codiceProdotto) {
         Prodotto prodotto = prodottoRepository.findByIdPerAggiornamento(codiceProdotto)
-                .orElseThrow(() -> new RisorsaNonTrovataException("Prodotto inesistente"));
+                .orElseThrow(() -> new RisorsaNonTrovataException("Prodotto non trovato."));
         if (prodotto.isVisible() || prodotto.getQuantita() == 0)
             throw new OperazioneNonValidaException("Solo prodotti fuori catalogo e con pezzi disponibili.");
         return prodotto;

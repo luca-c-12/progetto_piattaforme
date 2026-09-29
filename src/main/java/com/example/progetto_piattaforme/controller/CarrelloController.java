@@ -3,13 +3,13 @@ package com.example.progetto_piattaforme.controller;
 import com.example.progetto_piattaforme.dto.CarrelloDTO;
 import com.example.progetto_piattaforme.dto.request.AggiungiProdottoRequest;
 import com.example.progetto_piattaforme.dto.request.MergeCarrelloRequest;
+import com.example.progetto_piattaforme.security.UtenteCorrente;
+import com.example.progetto_piattaforme.service.CarrelloService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import com.example.progetto_piattaforme.security.UtenteCorrente;
-import com.example.progetto_piattaforme.service.CarrelloService;
 
 @RestController
 @RequiredArgsConstructor

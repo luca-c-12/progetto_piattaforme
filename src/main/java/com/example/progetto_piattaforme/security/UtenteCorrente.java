@@ -41,7 +41,7 @@ public class UtenteCorrente {
 
         try {
             return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
-        } catch (DataIntegrityViolationException e) { //due richieste simultanee di GET per l'utente appena creato ed il suo carrello da prate del front end
+        } catch (DataIntegrityViolationException e) { //due richieste simultanee di GET per l'utente appena creato ed il suo carrello da parte del front end
             return utenteService.trovaOCrea(keycloakId, email, nome, cognome, ruolo);
         }
     }

@@ -8,13 +8,13 @@ import com.example.progetto_piattaforme.entity.CategoriaProdotto;
 import com.example.progetto_piattaforme.entity.Prodotto;
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
+import com.example.progetto_piattaforme.repository.AstaRepository;
+import com.example.progetto_piattaforme.repository.ProdottoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.progetto_piattaforme.repository.AstaRepository;
-import com.example.progetto_piattaforme.repository.ProdottoRepository;
 
 
 @Service
@@ -45,7 +45,7 @@ public class ProdottoServiceImpl implements ProdottoService {
     @Transactional
     public ProdottoAdminDTO creaProdotto(CreaProdottoRequest richiesta) {
         if(richiesta.quantita() < 0)
-            throw new OperazioneNonValidaException("Quantita non valida");
+            throw new OperazioneNonValidaException("Quantità non valida.");
         Prodotto prodotto = new Prodotto();
         prodotto.setVisible(true);
         prodotto.setQuantita(richiesta.quantita());
@@ -90,21 +90,21 @@ public class ProdottoServiceImpl implements ProdottoService {
     public ProdottoAdminDTO impostaVisibilita(long codiceProdotto, boolean visibile) {
         Prodotto prodotto = caricaProdotto(codiceProdotto);
         if (visibile && astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(codiceProdotto))
-            throw new OperazioneNonValidaException("un prodotto all'asta non puó essere visibile nel catalogo");
+            throw new OperazioneNonValidaException("Un prodotto all'asta non può essere visibile nel catalogo.");
         prodotto.setVisible(visibile);
         return ProdottoAdminDTO.from(prodotto);
     }
 
     private Prodotto caricaProdotto(long codiceProdotto) {
         return prodottoRepository.findById(codiceProdotto)
-                .orElseThrow(()->new RisorsaNonTrovataException("prodotto inesistente"));
+                .orElseThrow(()->new RisorsaNonTrovataException("Prodotto non trovato."));
     }
 
     private Prodotto caricaProdottoVisibile(long codiceProdotto) {
         Prodotto prodotto = caricaProdotto(codiceProdotto);
         // nascosto o esaurito: per il catalogo pubblico è come se non esistesse
         if (!prodotto.isVisible() || prodotto.getQuantita() == 0)
-            throw new RisorsaNonTrovataException("prodotto inesistente");
+            throw new RisorsaNonTrovataException("Prodotto non trovato.");
         return prodotto;
     }
 }

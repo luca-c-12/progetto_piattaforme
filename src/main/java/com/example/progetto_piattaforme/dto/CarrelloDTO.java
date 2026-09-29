@@ -14,7 +14,7 @@ public record CarrelloDTO(
         BigDecimal totale
 ) {
     public CarrelloDTO {
-        prodotti = List.copyOf(prodotti); // record davvero immutabile
+        prodotti = List.copyOf(prodotti);
     }
 
     public static CarrelloDTO from(Carrello c) {
@@ -25,7 +25,7 @@ public record CarrelloDTO(
         for (RecordCarrello record : c.getProdotti()) {
             RecordCarrelloDTO riga = RecordCarrelloDTO.from(record);
             righe.add(riga);
-            totale = totale.add(riga.subtotale()); // BigDecimal è immutabile: add restituisce un nuovo valore
+            totale = totale.add(riga.subtotale());
             numeroArticoli += riga.quantita();
         }
 

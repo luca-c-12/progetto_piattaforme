@@ -3,6 +3,8 @@ package com.example.progetto_piattaforme.controller;
 
 import com.example.progetto_piattaforme.dto.RecensioneDTO;
 import com.example.progetto_piattaforme.dto.request.RecensioneRequest;
+import com.example.progetto_piattaforme.security.UtenteCorrente;
+import com.example.progetto_piattaforme.service.RecensioneService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -12,8 +14,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import com.example.progetto_piattaforme.security.UtenteCorrente;
-import com.example.progetto_piattaforme.service.RecensioneService;
 
 @RestController
 @RequiredArgsConstructor

@@ -44,11 +44,11 @@ public class Asta {
     private OffertaAsta offertaMax;
 
     @Column(name = "chiusa", nullable = false)
-    private boolean chiusa;          // true quando il job l'ha elaborata
+    private boolean chiusa;  // true quando il job l'ha elaborata
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_vincitore")
-    private Cliente vincitore;       // null se nessuno poteva pagare
+    private Cliente vincitore;  // null se nessuno poteva pagare
 
     @Column(name = "is_visible", nullable = false)
     private boolean isVisible;

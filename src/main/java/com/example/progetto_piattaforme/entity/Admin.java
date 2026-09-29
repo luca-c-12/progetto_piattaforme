@@ -1,6 +1,7 @@
 package com.example.progetto_piattaforme.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("ADMIN")

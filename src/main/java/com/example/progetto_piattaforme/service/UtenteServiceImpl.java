@@ -3,24 +3,17 @@ package com.example.progetto_piattaforme.service;
 import com.example.progetto_piattaforme.dto.ClienteDTO;
 import com.example.progetto_piattaforme.dto.UtenteDTO;
 import com.example.progetto_piattaforme.dto.request.AggiornaProfiloRequest;
-import com.example.progetto_piattaforme.dto.request.RegistrazioneAdminRequest;
-import com.example.progetto_piattaforme.dto.request.RegistrazioneClienteRequest;
 import com.example.progetto_piattaforme.dto.request.RicaricaSaldoRequest;
 import com.example.progetto_piattaforme.entity.*;
-
-import com.example.progetto_piattaforme.exception.EmailGiaRegistrataException;
 import com.example.progetto_piattaforme.exception.OperazioneNonValidaException;
 import com.example.progetto_piattaforme.exception.RisorsaNonTrovataException;
+import com.example.progetto_piattaforme.repository.ClienteRepository;
+import com.example.progetto_piattaforme.repository.UtenteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.progetto_piattaforme.repository.AdminRepository;
-import com.example.progetto_piattaforme.repository.ClienteRepository;
-import com.example.progetto_piattaforme.repository.UtenteRepository;
-
-import java.math.BigDecimal;
 
 @Service
 @Transactional(readOnly = true)
@@ -29,39 +22,6 @@ public class UtenteServiceImpl implements UtenteService{
 
     private final UtenteRepository utenteRepository;
     private final ClienteRepository clienteRepository;
-    private final AdminRepository adminRepository;
-
-
-    @Override
-    @Transactional
-    public ClienteDTO registraCliente(RegistrazioneClienteRequest richiesta) {
-        String email = richiesta.email().trim().toLowerCase();
-        verificaEmail(email);
-        Cliente cliente = new Cliente();
-        cliente.setSaldo(BigDecimal.ZERO);
-        cliente.setCarrello(new Carrello());
-        cliente.setIndirizzo(richiesta.indirizzo());
-        cliente.setEmail(email);
-        cliente.setNome(richiesta.nome());
-        cliente.setCognome(richiesta.cognome());
-        cliente.setVisible(true);
-        clienteRepository.save(cliente);
-        return ClienteDTO.from(cliente);
-    }
-
-    @Override
-    @Transactional
-    public UtenteDTO creaAdmin(RegistrazioneAdminRequest richiesta) {
-        String email = richiesta.email().trim().toLowerCase();
-        verificaEmail(email);
-        Admin admin = new Admin();
-        admin.setNome(richiesta.nome());
-        admin.setCognome(richiesta.cognome());
-        admin.setEmail(email);
-        admin.setVisible(true);
-        adminRepository.save(admin);
-        return UtenteDTO.from(admin);
-    }
 
     @Override
     public UtenteDTO getUtente(long idUtente) {
@@ -135,12 +95,6 @@ public class UtenteServiceImpl implements UtenteService{
         utenteRepository.save(utente);
         return utente.getIdUtente();
     }
-
-    private void verificaEmail(String email) {
-        if(utenteRepository.existsByEmail(email))
-            throw new EmailGiaRegistrataException("indirizzo email associato ad un altro utente");
-    }
-
 
     private Utente caricaUtente(long idUtente) {
         return utenteRepository.findById(idUtente)
