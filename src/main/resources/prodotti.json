@@ -1,0 +1,1750 @@
+{
+  "products": [
+    {
+      "title": "Mascara Essence Lash Princess",
+      "description": "Il mascara Essence Lash Princess è amatissimo per l'effetto volumizzante e allungante. Ciglia scenografiche con una formula a lunga tenuta e cruelty-free.",
+      "price": 5.49,
+      "stock": 99,
+      "brand": "Essence",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+    },
+    {
+      "title": "Palette ombretti con specchio",
+      "description": "Una palette con un'ampia gamma di tonalità per creare trucchi occhi d'effetto. Lo specchio integrato la rende comoda per ritoccarsi anche fuori casa.",
+      "price": 19.9,
+      "stock": 34,
+      "brand": "Glamour Beauty",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"
+    },
+    {
+      "title": "Cipria in polvere",
+      "description": "Cipria finissima che fissa il trucco e controlla la lucidità. La formula leggera e trasparente lascia la pelle liscia e opaca.",
+      "price": 12.9,
+      "stock": 89,
+      "brand": "Velvet Touch",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp"
+    },
+    {
+      "title": "Rossetto rosso",
+      "description": "Il rossetto rosso è la scelta classica e decisa per dare colore alle labbra. Formula cremosa e pigmentata, dal finish brillante e duraturo.",
+      "price": 11.99,
+      "stock": 91,
+      "brand": "Chic Cosmetics",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp"
+    },
+    {
+      "title": "Smalto rosso",
+      "description": "Uno smalto rosso intenso e brillante per unghie curate e vivaci. Si asciuga in fretta e dà un risultato da salone direttamente a casa.",
+      "price": 6.99,
+      "stock": 79,
+      "brand": "Nail Couture",
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp"
+    },
+    {
+      "title": "Calvin Klein CK One",
+      "description": "CK One di Calvin Klein è un classico profumo unisex, famoso per la sua fragranza fresca e pulita. Versatile, adatto a tutti i giorni.",
+      "price": 64.9,
+      "stock": 29,
+      "brand": "Calvin Klein",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp"
+    },
+    {
+      "title": "Chanel Coco Noir Eau de Parfum",
+      "description": "Coco Noir di Chanel è una fragranza elegante e misteriosa, con note di pompelmo, rosa e legno di sandalo. Perfetta per la sera.",
+      "price": 168.0,
+      "stock": 58,
+      "brand": "Chanel",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp"
+    },
+    {
+      "title": "Dior J'adore",
+      "description": "J'adore di Dior è una fragranza floreale e lussuosa, celebre per l'accordo di ylang-ylang, rosa e gelsomino. Incarna femminilità e raffinatezza.",
+      "price": 159.0,
+      "stock": 98,
+      "brand": "Dior",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
+    },
+    {
+      "title": "Dolce & Gabbana Dolce Shine Eau de Parfum",
+      "description": "Dolce Shine di Dolce & Gabbana è una fragranza vivace e fruttata, con note di mango, gelsomino e legni biondi. Un profumo allegro e giovane.",
+      "price": 95.0,
+      "stock": 4,
+      "brand": "Dolce & Gabbana",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp"
+    },
+    {
+      "title": "Gucci Bloom Eau de Parfum",
+      "description": "Gucci Bloom è una fragranza floreale e avvolgente, con note di tuberosa, gelsomino e caprifoglio di Rangoon. Un profumo moderno e romantico.",
+      "price": 145.0,
+      "stock": 91,
+      "brand": "Gucci",
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp"
+    },
+    {
+      "title": "Letto Annibale Colombo",
+      "description": "Il letto Annibale Colombo è una struttura lussuosa ed elegante, realizzata con materiali di alta qualità per una camera da letto comoda e raffinata.",
+      "price": 4900.0,
+      "stock": 88,
+      "brand": "Annibale Colombo",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
+    },
+    {
+      "title": "Divano Annibale Colombo",
+      "description": "Il divano Annibale Colombo è una seduta sofisticata e confortevole, dal design ricercato e con rivestimento di pregio, per il tuo soggiorno.",
+      "price": 6500.0,
+      "stock": 60,
+      "brand": "Annibale Colombo",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"
+    },
+    {
+      "title": "Comodino in ciliegio africano",
+      "description": "Il comodino in ciliegio africano è un complemento elegante e funzionale per la camera da letto, con un pratico vano contenitore.",
+      "price": 249.0,
+      "stock": 64,
+      "brand": "Furniture Co.",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"
+    },
+    {
+      "title": "Sedia direzionale Knoll Saarinen",
+      "description": "La sedia Knoll Saarinen Executive è una seduta moderna ed ergonomica, perfetta per l'ufficio o la sala riunioni grazie al suo design senza tempo.",
+      "price": 1390.0,
+      "stock": 26,
+      "brand": "Knoll",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp"
+    },
+    {
+      "title": "Mobile lavabo in legno con specchio",
+      "description": "Il mobile lavabo in legno con specchio è un elemento originale per il bagno, con piano lavabo in legno e specchio coordinato.",
+      "price": 690.0,
+      "stock": 7,
+      "brand": "Bath Trends",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp"
+    },
+    {
+      "title": "Mele (1 kg)",
+      "description": "Mele fresche e croccanti, perfette come spuntino o in tante ricette.",
+      "price": 2.49,
+      "stock": 8,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
+    },
+    {
+      "title": "Bistecca di manzo (500 g)",
+      "description": "Bistecca di manzo di alta qualità, ideale alla griglia o cotta al punto che preferisci.",
+      "price": 14.9,
+      "stock": 86,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/beef-steak/thumbnail.webp"
+    },
+    {
+      "title": "Cibo per gatti (1,5 kg)",
+      "description": "Crocchette nutrienti formulate per le esigenze alimentari del tuo gatto.",
+      "price": 8.99,
+      "stock": 46,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cat-food/thumbnail.webp"
+    },
+    {
+      "title": "Petto di pollo (1 kg)",
+      "description": "Carne di pollo fresca e tenera, adatta a tante preparazioni in cucina.",
+      "price": 11.9,
+      "stock": 97,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/thumbnail.webp"
+    },
+    {
+      "title": "Olio di semi (1 L)",
+      "description": "Olio da cucina versatile, adatto per friggere, saltare in padella e molti altri usi.",
+      "price": 3.49,
+      "stock": 10,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp"
+    },
+    {
+      "title": "Cetrioli (500 g)",
+      "description": "Cetrioli croccanti e dissetanti, ideali per insalate, spuntini o come contorno fresco.",
+      "price": 1.49,
+      "stock": 84,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cucumber/thumbnail.webp"
+    },
+    {
+      "title": "Cibo per cani (3 kg)",
+      "description": "Crocchette formulate per dare al tuo cane tutti i nutrienti essenziali.",
+      "price": 14.99,
+      "stock": 71,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/dog-food/thumbnail.webp"
+    },
+    {
+      "title": "Uova fresche (6 pz)",
+      "description": "Uova fresche, ingrediente versatile per dolci, piatti salati o la colazione.",
+      "price": 2.79,
+      "stock": 9,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp"
+    },
+    {
+      "title": "Trancio di pesce (300 g)",
+      "description": "Trancio di pesce di qualità, da cuocere alla griglia, al forno o in padella.",
+      "price": 8.9,
+      "stock": 74,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp"
+    },
+    {
+      "title": "Peperone verde",
+      "description": "Peperone verde fresco e brillante, perfetto per dare colore e sapore ai tuoi piatti.",
+      "price": 0.89,
+      "stock": 33,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp"
+    },
+    {
+      "title": "Peperoncino verde (100 g)",
+      "description": "Peperoncino verde piccante, ideale per dare una nota decisa alle tue ricette preferite.",
+      "price": 0.99,
+      "stock": 3,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp"
+    },
+    {
+      "title": "Miele (500 g)",
+      "description": "Miele puro e naturale in un comodo barattolo, perfetto per dolcificare le bevande o da versare sui cibi.",
+      "price": 6.49,
+      "stock": 34,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp"
+    },
+    {
+      "title": "Gelato (500 g)",
+      "description": "Gelato cremoso e delizioso, disponibile in vari gusti per una pausa golosa.",
+      "price": 4.99,
+      "stock": 27,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp"
+    },
+    {
+      "title": "Succo di frutta (1 L)",
+      "description": "Succo di frutta rinfrescante, ricco di vitamine e ottimo per idratarsi.",
+      "price": 2.19,
+      "stock": 50,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/juice/thumbnail.webp"
+    },
+    {
+      "title": "Kiwi (1 kg)",
+      "description": "Kiwi ricchi di nutrienti, perfetti come spuntino o per dare un tocco esotico ai tuoi piatti.",
+      "price": 2.99,
+      "stock": 99,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
+    },
+    {
+      "title": "Limoni (500 g)",
+      "description": "Limoni profumati e aciduli, versatili in cucina, nei dolci o per bevande rinfrescanti.",
+      "price": 1.39,
+      "stock": 31,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/lemon/thumbnail.webp"
+    },
+    {
+      "title": "Latte fresco (1 L)",
+      "description": "Latte fresco e nutriente, immancabile in tante ricette e nel consumo di tutti i giorni.",
+      "price": 1.69,
+      "stock": 27,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/milk/thumbnail.webp"
+    },
+    {
+      "title": "More di gelso (250 g)",
+      "description": "More di gelso dolci e succose, perfette come spuntino o con dolci e cereali.",
+      "price": 4.49,
+      "stock": 99,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/mulberry/thumbnail.webp"
+    },
+    {
+      "title": "Caffè solubile Nescafé (200 g)",
+      "description": "Caffè solubile Nescafé di qualità, disponibile in diverse miscele per una tazza ricca e appagante.",
+      "price": 8.49,
+      "stock": 57,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/thumbnail.webp"
+    },
+    {
+      "title": "Patate (1,5 kg)",
+      "description": "Patate versatili e farinose, ottime al forno, in purè o come contorno.",
+      "price": 2.49,
+      "stock": 13,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp"
+    },
+    {
+      "title": "Proteine in polvere (1 kg)",
+      "description": "Proteine in polvere ricche di nutrienti, ideali per integrare la dieta con le proteine essenziali.",
+      "price": 29.9,
+      "stock": 80,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/protein-powder/thumbnail.webp"
+    },
+    {
+      "title": "Cipolle rosse (1 kg)",
+      "description": "Cipolle rosse saporite e aromatiche, perfette per dare profondità ai piatti salati.",
+      "price": 2.29,
+      "stock": 82,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/red-onions/thumbnail.webp"
+    },
+    {
+      "title": "Riso (1 kg)",
+      "description": "Riso di alta qualità, base versatile per tante cucine e moltissimi piatti.",
+      "price": 2.79,
+      "stock": 59,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/rice/thumbnail.webp"
+    },
+    {
+      "title": "Bibite gassate (1,5 L)",
+      "description": "Bibite gassate assortite in vari gusti, per un momento di freschezza.",
+      "price": 1.79,
+      "stock": 53,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/soft-drinks/thumbnail.webp"
+    },
+    {
+      "title": "Fragole (500 g)",
+      "description": "Fragole dolci e succose, ottime da sole, nei dolci o nei frullati.",
+      "price": 3.99,
+      "stock": 46,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/strawberry/thumbnail.webp"
+    },
+    {
+      "title": "Fazzoletti in scatola",
+      "description": "Pratica scatola di fazzoletti per l'uso quotidiano, morbidi e assorbenti.",
+      "price": 1.99,
+      "stock": 86,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/thumbnail.webp"
+    },
+    {
+      "title": "Acqua naturale (1,5 L)",
+      "description": "Acqua in bottiglia pura e rinfrescante, essenziale per restare idratati durante la giornata.",
+      "price": 0.49,
+      "stock": 53,
+      "brand": null,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/water/thumbnail.webp"
+    },
+    {
+      "title": "Altalena decorativa",
+      "description": "Un'altalena decorativa che dà fascino alla casa. Curata nei dettagli, aggiunge un tocco di eleganza e fantasia a qualsiasi stanza.",
+      "price": 39.9,
+      "stock": 47,
+      "brand": null,
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/thumbnail.webp"
+    },
+    {
+      "title": "Cornice albero genealogico",
+      "description": "Un modo elegante ed emozionante per esporre i ricordi di famiglia. Con più spazi per le foto, racconta la storia delle persone care.",
+      "price": 24.9,
+      "stock": 77,
+      "brand": null,
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/thumbnail.webp"
+    },
+    {
+      "title": "Pianta decorativa artificiale",
+      "description": "Una pianta artificiale che porta un tocco di natura in casa senza bisogno di cure. Aggiunge verde e stile a qualsiasi ambiente.",
+      "price": 34.9,
+      "stock": 28,
+      "brand": null,
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/thumbnail.webp"
+    },
+    {
+      "title": "Vaso per piante",
+      "description": "Un vaso elegante per le tue piante preferite. Dal design essenziale, si abbina a giardini interni ed esterni con un tocco moderno.",
+      "price": 12.9,
+      "stock": 59,
+      "brand": null,
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp"
+    },
+    {
+      "title": "Lampada da tavolo",
+      "description": "Una lampada funzionale e decorativa per il soggiorno. Dal design moderno, offre luce d'ambiente e luce di lettura, migliorando l'atmosfera.",
+      "price": 39.9,
+      "stock": 9,
+      "brand": null,
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/thumbnail.webp"
+    },
+    {
+      "title": "Spatola in bambù",
+      "description": "Utensile da cucina versatile in bambù ecologico. Ideale per girare, mescolare e servire.",
+      "price": 4.99,
+      "stock": 37,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp"
+    },
+    {
+      "title": "Tazza in alluminio nera",
+      "description": "Tazza elegante e resistente, adatta a bevande calde e fredde. Il design nero e lineare dà un tocco moderno.",
+      "price": 7.99,
+      "stock": 75,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/thumbnail.webp"
+    },
+    {
+      "title": "Frusta nera",
+      "description": "Immancabile in cucina per sbattere e montare. Impugnatura ergonomica e design curato la rendono pratica ed elegante.",
+      "price": 6.99,
+      "stock": 73,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp"
+    },
+    {
+      "title": "Frullatore",
+      "description": "Frullatore potente e compatto, perfetto per smoothie, frappè e molto altro. Pratico e con più funzioni, è un elettrodomestico versatile.",
+      "price": 49.9,
+      "stock": 9,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp"
+    },
+    {
+      "title": "Wok in acciaio al carbonio",
+      "description": "Padella versatile per saltare, rosolare e friggere. La struttura robusta distribuisce il calore in modo uniforme.",
+      "price": 34.9,
+      "stock": 40,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/thumbnail.webp"
+    },
+    {
+      "title": "Tagliere",
+      "description": "Accessorio essenziale per preparare il cibo. In materiale resistente, offre una superficie sicura e igienica per tagliare e tritare.",
+      "price": 14.9,
+      "stock": 14,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/thumbnail.webp"
+    },
+    {
+      "title": "Spremiagrumi giallo",
+      "description": "Pratico utensile per estrarre il succo dagli agrumi. Il colore vivace aggiunge allegria alla cucina.",
+      "price": 7.9,
+      "stock": 22,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/thumbnail.webp"
+    },
+    {
+      "title": "Tagliauova",
+      "description": "Utensile comodo per affettare in modo uniforme le uova sode. Perfetto per insalate, panini e altri piatti.",
+      "price": 5.99,
+      "stock": 40,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp"
+    },
+    {
+      "title": "Fornello elettrico",
+      "description": "Una soluzione di cottura portatile ed efficiente. Ideale per cucine piccole o come piano di cottura aggiuntivo.",
+      "price": 39.9,
+      "stock": 21,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp"
+    },
+    {
+      "title": "Colino a maglia fine",
+      "description": "Utensile versatile per filtrare liquidi e setacciare ingredienti secchi. La maglia fine garantisce un filtraggio efficace.",
+      "price": 8.9,
+      "stock": 85,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/thumbnail.webp"
+    },
+    {
+      "title": "Forchetta",
+      "description": "Posata classica per mangiare e servire. Resistente ed ergonomica, è una scelta affidabile per tutti i giorni.",
+      "price": 2.49,
+      "stock": 7,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/thumbnail.webp"
+    },
+    {
+      "title": "Bicchiere",
+      "description": "Bicchiere elegante e versatile, adatto a tante bevande. Il vetro trasparente esalta colori e consistenze delle tue bibite.",
+      "price": 3.49,
+      "stock": 46,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/thumbnail.webp"
+    },
+    {
+      "title": "Grattugia nera",
+      "description": "Pratica grattugia per formaggi, verdure e altro. Design elegante e lame affilate rendono la preparazione facile e veloce.",
+      "price": 9.9,
+      "stock": 84,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/thumbnail.webp"
+    },
+    {
+      "title": "Frullatore a immersione",
+      "description": "Elettrodomestico versatile per frullare, passare e mescolare. Compatto e potente, è comodo per tante ricette.",
+      "price": 39.9,
+      "stock": 84,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/thumbnail.webp"
+    },
+    {
+      "title": "Stampo per cubetti di ghiaccio",
+      "description": "Accessorio pratico per preparare cubetti di ghiaccio di varie forme. Perfetto per bevande fresche e divertenti.",
+      "price": 4.99,
+      "stock": 13,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/thumbnail.webp"
+    },
+    {
+      "title": "Setaccio da cucina",
+      "description": "Utensile versatile per setacciare e filtrare ingredienti secchi e liquidi. La maglia fine assicura risultati omogenei.",
+      "price": 6.9,
+      "stock": 68,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/thumbnail.webp"
+    },
+    {
+      "title": "Coltello da cucina",
+      "description": "Strumento essenziale per tritare, affettare e tagliare a cubetti. Lama affilata e impugnatura ergonomica.",
+      "price": 19.9,
+      "stock": 7,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/thumbnail.webp"
+    },
+    {
+      "title": "Portapranzo",
+      "description": "Contenitore pratico e portatile per i tuoi pasti. Con scomparti per cibi diversi, è perfetto per mangiare fuori casa.",
+      "price": 14.9,
+      "stock": 94,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/thumbnail.webp"
+    },
+    {
+      "title": "Forno a microonde",
+      "description": "Elettrodomestico versatile per cuocere, riscaldare e scongelare in modo rapido ed efficiente. Le dimensioni compatte lo rendono adatto a ogni cucina.",
+      "price": 99.9,
+      "stock": 59,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/thumbnail.webp"
+    },
+    {
+      "title": "Albero portatazze",
+      "description": "Soluzione elegante e salvaspazio per organizzare le tazze. Tieni le tue tazze preferite in ordine e sempre a portata di mano.",
+      "price": 14.9,
+      "stock": 88,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/thumbnail.webp"
+    },
+    {
+      "title": "Padella antiaderente",
+      "description": "Pentola versatile ed essenziale per friggere, saltare e cucinare tanti piatti. Il rivestimento antiaderente fa staccare il cibo e semplifica la pulizia.",
+      "price": 24.9,
+      "stock": 90,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/thumbnail.webp"
+    },
+    {
+      "title": "Piatto",
+      "description": "Stoviglia classica ed essenziale per servire i pasti. Resistente ed elegante, va bene tutti i giorni come nelle occasioni speciali.",
+      "price": 4.49,
+      "stock": 66,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/thumbnail.webp"
+    },
+    {
+      "title": "Pinze da cucina rosse",
+      "description": "Pinze versatili per cucinare e servire. Il colore vivace aggiunge un tocco di allegria agli utensili da cucina.",
+      "price": 6.49,
+      "stock": 82,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/thumbnail.webp"
+    },
+    {
+      "title": "Pentola in acciaio con coperchio in vetro",
+      "description": "Pentola elegante e funzionale per bollire, cuocere a fuoco lento e preparare ottimi piatti. Il coperchio in vetro permette di controllare la cottura.",
+      "price": 39.9,
+      "stock": 40,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/thumbnail.webp"
+    },
+    {
+      "title": "Spatola forata",
+      "description": "Utensile pensato per girare e rigirare gli alimenti. I fori lasciano scolare i liquidi in eccesso: ideale per fritture e cotture in padella.",
+      "price": 7.9,
+      "stock": 88,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/thumbnail.webp"
+    },
+    {
+      "title": "Portaspezie",
+      "description": "Pratico organizer per spezie e condimenti. Tieni gli essenziali della cucina in ordine e a portata di mano con stile.",
+      "price": 19.9,
+      "stock": 79,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/thumbnail.webp"
+    },
+    {
+      "title": "Cucchiaio da cucina",
+      "description": "Utensile versatile per mescolare, servire e assaggiare. Ergonomico e robusto, è uno strumento essenziale in ogni cucina.",
+      "price": 3.99,
+      "stock": 59,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/thumbnail.webp"
+    },
+    {
+      "title": "Vassoio",
+      "description": "Elemento funzionale e decorativo per servire snack, antipasti o bevande. Il design elegante lo rende perfetto quando hai ospiti.",
+      "price": 16.9,
+      "stock": 71,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/thumbnail.webp"
+    },
+    {
+      "title": "Mattarello in legno",
+      "description": "Classico utensile per stendere l'impasto di pane e dolci. La superficie liscia e le impugnature robuste aiutano a ottenere uno spessore uniforme.",
+      "price": 9.9,
+      "stock": 80,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/thumbnail.webp"
+    },
+    {
+      "title": "Pelapatate giallo",
+      "description": "Utensile pratico per sbucciare frutta e verdura senza fatica. Il giallo brillante dà un tocco allegro alla cucina.",
+      "price": 4.99,
+      "stock": 35,
+      "brand": null,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/thumbnail.webp"
+    },
+    {
+      "title": "Apple MacBook Pro 14 pollici Grigio siderale",
+      "description": "Il MacBook Pro da 14 pollici in grigio siderale è un portatile potente ed elegante, con chip Apple M1 Pro per prestazioni eccezionali e uno splendido display Retina.",
+      "price": 1899.0,
+      "stock": 24,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
+    },
+    {
+      "title": "Asus Zenbook Pro Duo con doppio schermo",
+      "description": "L'Asus Zenbook Pro Duo è un portatile ad alte prestazioni con doppio schermo, che offre produttività e versatilità ai professionisti creativi.",
+      "price": 2199.0,
+      "stock": 45,
+      "brand": "Asus",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp"
+    },
+    {
+      "title": "Huawei Matebook X Pro",
+      "description": "L'Huawei Matebook X Pro è un portatile sottile ed elegante con touchscreen ad alta risoluzione, per un'esperienza premium anche in movimento.",
+      "price": 1699.0,
+      "stock": 75,
+      "brand": "Huawei",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp"
+    },
+    {
+      "title": "Lenovo Yoga 920",
+      "description": "Il Lenovo Yoga 920 è un convertibile 2 in 1 con cerniera flessibile: si usa come portatile o come tablet, versatile e facile da trasportare.",
+      "price": 999.0,
+      "stock": 40,
+      "brand": "Lenovo",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp"
+    },
+    {
+      "title": "Dell XPS 13 9300",
+      "description": "Il Dell XPS 13 9300 è un portatile compatto e potente, con display InfinityEdge quasi senza bordi e prestazioni di fascia alta per ogni attività.",
+      "price": 1399.0,
+      "stock": 74,
+      "brand": "Dell",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp"
+    },
+    {
+      "title": "Camicia a quadri blu e nera",
+      "description": "Camicia da uomo elegante e comoda con il classico motivo a quadri. In tessuto di qualità, va bene sia per il tempo libero sia per occasioni semi-formali.",
+      "price": 29.9,
+      "stock": 38,
+      "brand": "Fashion Trends",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp"
+    },
+    {
+      "title": "T-shirt uomo Gigabyte Aorus",
+      "description": "T-shirt casual per gli appassionati di gaming. Con il logo Aorus e un design curato, è perfetta per esprimere il tuo stile da gamer.",
+      "price": 24.9,
+      "stock": 90,
+      "brand": "Gigabyte",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/thumbnail.webp"
+    },
+    {
+      "title": "Camicia uomo scozzese",
+      "description": "Camicia da uomo senza tempo con il classico motivo scozzese. Vestibilità comoda e stile casual: un capo essenziale per molte occasioni.",
+      "price": 34.9,
+      "stock": 82,
+      "brand": "Classic Wear",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/thumbnail.webp"
+    },
+    {
+      "title": "Camicia uomo a maniche corte",
+      "description": "Camicia fresca ed elegante per le giornate calde. Comoda e a maniche corte, perfetta per un look rilassato ma curato.",
+      "price": 22.9,
+      "stock": 2,
+      "brand": "Casual Comfort",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp"
+    },
+    {
+      "title": "Camicia uomo a quadretti",
+      "description": "Camicia classica e versatile con un elegante motivo a quadretti. Adatta a molte occasioni, dà un tocco ordinato e curato al guardaroba.",
+      "price": 27.9,
+      "stock": 95,
+      "brand": "Urban Chic",
+      "category": "mens-shirts",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/thumbnail.webp"
+    },
+    {
+      "title": "Nike Air Jordan 1 rosse e nere",
+      "description": "Le Nike Air Jordan 1 rosse e nere sono una sneaker da basket iconica, apprezzata per il design e le prestazioni: le preferite da collezionisti e sportivi.",
+      "price": 189.99,
+      "stock": 7,
+      "brand": "Nike",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp"
+    },
+    {
+      "title": "Scarpe da baseball Nike con tacchetti",
+      "description": "Le scarpe Nike con tacchetti sono pensate per la massima aderenza e le migliori prestazioni sul campo da baseball, con stabilità e sostegno in partita e in allenamento.",
+      "price": 89.99,
+      "stock": 12,
+      "brand": "Nike",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/thumbnail.webp"
+    },
+    {
+      "title": "Puma Future Rider",
+      "description": "Le Puma Future Rider uniscono stile retrò e comfort moderno. Perfette per il tempo libero, sono una scelta comoda e alla moda per tutti i giorni.",
+      "price": 89.95,
+      "stock": 90,
+      "brand": "Puma",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp"
+    },
+    {
+      "title": "Sneaker sportive Off-White bianco e rosso",
+      "description": "Le sneaker sportive Off-White in bianco e rosso uniscono stile e funzionalità, per gli amanti dello sport attenti alla moda. L'abbinamento di colori dà un tocco deciso ed energico.",
+      "price": 395.0,
+      "stock": 17,
+      "brand": "Off White",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp"
+    },
+    {
+      "title": "Sneaker sportive Off-White rosse",
+      "description": "Un'altra variante delle sneaker sportive Off-White in rosso, dal design particolare. Offrono stile e comfort per le occasioni informali.",
+      "price": 375.0,
+      "stock": 62,
+      "brand": "Off White",
+      "category": "mens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp"
+    },
+    {
+      "title": "Orologio con cinturino in pelle marrone",
+      "description": "Orologio elegante dal design classico, con cinturino in vera pelle e quadrante essenziale: aggiunge un tocco di raffinatezza al tuo look.",
+      "price": 79.9,
+      "stock": 32,
+      "brand": "Fashion Timepieces",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/thumbnail.webp"
+    },
+    {
+      "title": "Longines Master Collection",
+      "description": "Il Longines Master Collection è un orologio elegante e raffinato, noto per precisione e qualità artigianale. Il design senza tempo lo rende un simbolo di lusso.",
+      "price": 2600.0,
+      "stock": 100,
+      "brand": "Longines",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Cellini Date quadrante nero",
+      "description": "Il Rolex Cellini Date con quadrante nero è un orologio classico e prestigioso. Con il datario e il quadrante nero esprime raffinatezza ed è un simbolo della tradizione Rolex.",
+      "price": 19500.0,
+      "stock": 40,
+      "brand": "Rolex",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Cellini Moonphase",
+      "description": "Il Rolex Cellini Moonphase è un capolavoro di alta orologeria, con complicazione delle fasi lunari e design ricercato. Riflette l'impegno di Rolex per precisione ed eleganza.",
+      "price": 27500.0,
+      "stock": 36,
+      "brand": "Rolex",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Datejust",
+      "description": "Il Rolex Datejust è un orologio iconico e versatile con finestrella del datario. Famoso per il design senza tempo e l'affidabilità, è un simbolo dell'eccellenza Rolex.",
+      "price": 9650.0,
+      "stock": 86,
+      "brand": "Rolex",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Submariner",
+      "description": "Il Rolex Submariner è un leggendario orologio subacqueo dalla lunga storia. Celebre per robustezza e impermeabilità, è un simbolo di avventura ed esplorazione.",
+      "price": 11200.0,
+      "stock": 55,
+      "brand": "Rolex",
+      "category": "mens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp"
+    },
+    {
+      "title": "Amazon Echo Plus",
+      "description": "L'Amazon Echo Plus è uno smart speaker con controllo vocale Alexa integrato. Offre un audio di qualità e fa da hub per controllare i dispositivi della casa intelligente.",
+      "price": 99.99,
+      "stock": 61,
+      "brand": "Amazon",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp"
+    },
+    {
+      "title": "Apple AirPods",
+      "description": "Gli Apple AirPods offrono un'esperienza audio wireless senza interruzioni: abbinamento immediato, suono di qualità e integrazione con Siri, perfetti in movimento.",
+      "price": 149.0,
+      "stock": 67,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp"
+    },
+    {
+      "title": "Apple AirPods Max argento",
+      "description": "Gli AirPods Max argento sono cuffie over-ear premium con audio ad alta fedeltà, equalizzazione adattiva e cancellazione attiva del rumore. Un suono immersivo con stile.",
+      "price": 579.0,
+      "stock": 59,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp"
+    },
+    {
+      "title": "Caricabatterie wireless Apple AirPower",
+      "description": "Il caricabatterie wireless AirPower ricarica senza fili i dispositivi Apple compatibili. Basta appoggiarli sul tappetino per ricaricarli senza fatica.",
+      "price": 99.0,
+      "stock": 1,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp"
+    },
+    {
+      "title": "Apple HomePod mini grigio siderale",
+      "description": "L'HomePod mini grigio siderale è uno smart speaker compatto dal suono sorprendente, che si integra perfettamente con l'ecosistema Apple per una casa intelligente.",
+      "price": 109.0,
+      "stock": 27,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp"
+    },
+    {
+      "title": "Alimentatore Apple per iPhone",
+      "description": "Alimentatore di alta qualità per una ricarica rapida ed efficiente dell'iPhone. Il tuo dispositivo resta sempre carico e pronto all'uso.",
+      "price": 25.0,
+      "stock": 31,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp"
+    },
+    {
+      "title": "Batteria esterna Apple MagSafe",
+      "description": "La batteria MagSafe è un modo pratico e portatile per aggiungere autonomia agli iPhone compatibili MagSafe. Si aggancia con i magneti per una connessione sicura.",
+      "price": 109.0,
+      "stock": 1,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp"
+    },
+    {
+      "title": "Apple Watch Series 4 oro",
+      "description": "L'Apple Watch Series 4 oro è uno smartwatch elegante e avanzato, con rilevazione del battito cardiaco, monitoraggio dell'attività fisica e un bel display Retina.",
+      "price": 299.0,
+      "stock": 33,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp"
+    },
+    {
+      "title": "Auricolari wireless Beats Flex",
+      "description": "Gli auricolari Beats Flex offrono un ascolto comodo e versatile. Con auricolari magnetici e fino a 12 ore di autonomia, sono ideali per tutti i giorni.",
+      "price": 59.95,
+      "stock": 50,
+      "brand": "Beats",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp"
+    },
+    {
+      "title": "Custodia in silicone MagSafe per iPhone 12 prugna",
+      "description": "Custodia in silicone color prugna, elegante e protettiva, pensata per iPhone 12. Con tecnologia MagSafe per agganciare facilmente gli accessori.",
+      "price": 55.0,
+      "stock": 69,
+      "brand": "Apple",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp"
+    },
+    {
+      "title": "Monopiede",
+      "description": "Accessorio fotografico versatile per scatti stabili e regolabili. Perfetto per selfie, foto di gruppo e video senza fatica.",
+      "price": 24.9,
+      "stock": 48,
+      "brand": "TechGear",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp"
+    },
+    {
+      "title": "Lampada per selfie per iPhone",
+      "description": "Luce LED portatile e regolabile pensata per migliorare selfie e videochiamate. Si aggancia all'iPhone per foto ben illuminate.",
+      "price": 14.9,
+      "stock": 58,
+      "brand": "GadgetMaster",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp"
+    },
+    {
+      "title": "Bastone per selfie",
+      "description": "Bastone allungabile e pieghevole per il selfie perfetto o la foto di gruppo. Compatibile con smartphone e fotocamere.",
+      "price": 12.9,
+      "stock": 11,
+      "brand": "SnapTech",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp"
+    },
+    {
+      "title": "Piedistallo per telecamera da studio TV",
+      "description": "Sistema di supporto professionale per movimenti di camera fluidi e precisi in studio. Ideale per trasmissioni e produzioni video.",
+      "price": 1490.0,
+      "stock": 15,
+      "brand": "ProVision",
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/thumbnail.webp"
+    },
+    {
+      "title": "Moto generica",
+      "description": "Una moto versatile e affidabile, adatta a ogni stile di guida. Il design equilibrato offre una guida comoda ed efficiente.",
+      "price": 4490.0,
+      "stock": 34,
+      "brand": "Generic Motors",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/thumbnail.webp"
+    },
+    {
+      "title": "Kawasaki Z800",
+      "description": "La Kawasaki Z800 è una naked potente e agile, nota per il design aggressivo e le prestazioni. Dotata di soluzioni avanzate, è amatissima dagli appassionati.",
+      "price": 9490.0,
+      "stock": 52,
+      "brand": "Kawasaki",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/thumbnail.webp"
+    },
+    {
+      "title": "MotoGP CI.H1",
+      "description": "La MotoGP CI.H1 è una moto ad alte prestazioni ispirata alla tecnologia delle corse MotoGP. Soluzioni d'avanguardia e ingegneria di precisione per una guida entusiasmante.",
+      "price": 24900.0,
+      "stock": 10,
+      "brand": "MotoGP",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/thumbnail.webp"
+    },
+    {
+      "title": "Scooter",
+      "description": "Uno scooter pratico e dai consumi ridotti, ideale per muoversi in città. Pedana passante e comandi intuitivi lo rendono facile da guidare.",
+      "price": 2790.0,
+      "stock": 84,
+      "brand": "ScootMaster",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/thumbnail.webp"
+    },
+    {
+      "title": "Moto sportiva",
+      "description": "Una moto pensata per velocità e agilità, dal profilo slanciato e aerodinamico. Adatta a chi cerca una guida dinamica ed emozionante.",
+      "price": 9990.0,
+      "stock": 0,
+      "brand": "SpeedMaster",
+      "category": "motorcycle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/thumbnail.webp"
+    },
+    {
+      "title": "Sapone mani Attitude Super Leaves",
+      "description": "Il sapone mani Attitude Super Leaves è un detergente naturale e nutriente arricchito con estratti di foglie. Pulisce e idrata, lasciando le mani fresche e morbide.",
+      "price": 7.49,
+      "stock": 94,
+      "brand": "Attitude",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/thumbnail.webp"
+    },
+    {
+      "title": "Bagnoschiuma Olay Ultra Moisture al burro di karité",
+      "description": "Il bagnoschiuma Olay Ultra Moisture idrata e nutre la pelle grazie al burro di karité. Una schiuma ricca per una pelle liscia come la seta.",
+      "price": 6.99,
+      "stock": 34,
+      "brand": "Olay",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/thumbnail.webp"
+    },
+    {
+      "title": "Lozione corpo e viso Vaseline Men",
+      "description": "Lozione formulata appositamente per dare idratazione duratura alla pelle maschile. Si assorbe in fretta e mantiene la pelle idratata e sana.",
+      "price": 6.49,
+      "stock": 95,
+      "brand": "Vaseline",
+      "category": "skin-care",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/thumbnail.webp"
+    },
+    {
+      "title": "iPhone 5s",
+      "description": "L'iPhone 5s è uno smartphone classico, apprezzato al suo lancio per il design compatto e le funzioni avanzate. È un modello datato, ma offre ancora un'esperienza affidabile.",
+      "price": 89.0,
+      "stock": 25,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+    },
+    {
+      "title": "iPhone 6",
+      "description": "L'iPhone 6 è uno smartphone elegante e capace, con display più grande e prestazioni migliorate. Ha introdotto nuove funzioni e un nuovo design, diventando molto popolare.",
+      "price": 119.0,
+      "stock": 60,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp"
+    },
+    {
+      "title": "iPhone 13 Pro",
+      "description": "L'iPhone 13 Pro è uno smartphone all'avanguardia con un sistema di fotocamere potente, chip ad alte prestazioni e un display straordinario, per chi vuole il meglio della tecnologia.",
+      "price": 649.0,
+      "stock": 56,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp"
+    },
+    {
+      "title": "iPhone X",
+      "description": "L'iPhone X è uno smartphone di punta con display OLED senza bordi, riconoscimento facciale Face ID e prestazioni notevoli. Una tappa fondamentale nel design dell'iPhone.",
+      "price": 249.0,
+      "stock": 37,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp"
+    },
+    {
+      "title": "Oppo A57",
+      "description": "L'Oppo A57 è uno smartphone di fascia media dal design curato e dalle buone funzioni. Offre un buon equilibrio tra prestazioni e prezzo.",
+      "price": 179.0,
+      "stock": 19,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp"
+    },
+    {
+      "title": "Oppo F19 Pro+",
+      "description": "L'Oppo F19 Pro+ è uno smartphone ricco di funzioni, con particolare attenzione alla fotocamera. Offre funzioni fotografiche avanzate e prestazioni elevate.",
+      "price": 329.0,
+      "stock": 78,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp"
+    },
+    {
+      "title": "Oppo K1",
+      "description": "La serie Oppo K1 propone smartphone con caratteristiche diverse. Apprezzati per il design elegante e le prestazioni affidabili, soddisfano esigenze diverse.",
+      "price": 229.0,
+      "stock": 55,
+      "brand": "Oppo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp"
+    },
+    {
+      "title": "Realme C35",
+      "description": "Il Realme C35 è uno smartphone economico, pensato per offrire le funzioni essenziali di tutti i giorni con prestazioni affidabili e un'esperienza semplice.",
+      "price": 149.0,
+      "stock": 48,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp"
+    },
+    {
+      "title": "Realme X",
+      "description": "Il Realme X è uno smartphone di fascia media noto per il design curato e l'ottimo display. Offre un buon equilibrio tra prestazioni e fotocamera.",
+      "price": 249.0,
+      "stock": 12,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp"
+    },
+    {
+      "title": "Realme XT",
+      "description": "Il Realme XT è uno smartphone ricco di funzioni, con particolare attenzione alla fotocamera: sensori avanzati per foto e video di qualità.",
+      "price": 279.0,
+      "stock": 80,
+      "brand": "Realme",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp"
+    },
+    {
+      "title": "Samsung Galaxy S7",
+      "description": "Il Samsung Galaxy S7 è uno smartphone di punta noto per il design elegante e le funzioni avanzate: display ad alta risoluzione, fotocamera potente e prestazioni solide.",
+      "price": 99.0,
+      "stock": 67,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp"
+    },
+    {
+      "title": "Samsung Galaxy S8",
+      "description": "Il Samsung Galaxy S8 è uno smartphone premium con Infinity Display per un'esperienza visiva straordinaria, fotocamera avanzata e tecnologia all'avanguardia.",
+      "price": 149.0,
+      "stock": 0,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp"
+    },
+    {
+      "title": "Samsung Galaxy S10",
+      "description": "Il Samsung Galaxy S10 è un top di gamma con display Dynamic AMOLED, sistema di fotocamere versatile e prestazioni elevate. Innovazione ed eccellenza negli smartphone.",
+      "price": 229.0,
+      "stock": 19,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp"
+    },
+    {
+      "title": "Vivo S1",
+      "description": "Il Vivo S1 è uno smartphone di fascia media elegante, che unisce design e prestazioni: display brillante, fotocamera capace e funzionamento affidabile.",
+      "price": 199.0,
+      "stock": 50,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp"
+    },
+    {
+      "title": "Vivo V9",
+      "description": "Il Vivo V9 è uno smartphone dal design curato, pensato per selfie di alta qualità. Ha display con notch, doppia fotocamera e linee moderne.",
+      "price": 179.0,
+      "stock": 82,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp"
+    },
+    {
+      "title": "Vivo X21",
+      "description": "Il Vivo X21 è uno smartphone premium dalla tecnologia all'avanguardia: sensore di impronte sotto il display, schermo ad alta risoluzione e fotocamera avanzata.",
+      "price": 299.0,
+      "stock": 7,
+      "brand": "Vivo",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp"
+    },
+    {
+      "title": "Pallone da football americano",
+      "description": "Il classico pallone da football americano, pensato per lanciare e ricevere: un attrezzo essenziale per questo sport.",
+      "price": 24.9,
+      "stock": 53,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/american-football/thumbnail.webp"
+    },
+    {
+      "title": "Palla da baseball",
+      "description": "Palla da baseball regolamentare con copertura in pelle resistente, pensata per lanciare, battere e ricevere.",
+      "price": 7.9,
+      "stock": 100,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-ball/thumbnail.webp"
+    },
+    {
+      "title": "Guantone da baseball",
+      "description": "Guantone protettivo per giocatori di baseball, pensato per ricevere e fermare la palla con comfort e controllo durante la partita.",
+      "price": 39.9,
+      "stock": 22,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/thumbnail.webp"
+    },
+    {
+      "title": "Pallone da basket",
+      "description": "Pallone da basket regolamentare, pensato per palleggio, tiro e passaggio. Adatto sia al gioco indoor sia all'aperto.",
+      "price": 24.9,
+      "stock": 75,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/basketball/thumbnail.webp"
+    },
+    {
+      "title": "Canestro da basket",
+      "description": "Anello robusto con retina da montare su un tabellone da basket: il bersaglio per tirare e fare punto.",
+      "price": 34.9,
+      "stock": 43,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/thumbnail.webp"
+    },
+    {
+      "title": "Palla da cricket",
+      "description": "Palla in cuoio duro usata nel cricket. La sua durezza e la cucitura influenzano lanci e battute durante il gioco.",
+      "price": 14.9,
+      "stock": 30,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-ball/thumbnail.webp"
+    },
+    {
+      "title": "Mazza da cricket",
+      "description": "Attrezzo essenziale del cricket, usato dal battitore per colpire la palla. In legno, disponibile in varie misure e modelli.",
+      "price": 49.9,
+      "stock": 98,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/thumbnail.webp"
+    },
+    {
+      "title": "Casco da cricket",
+      "description": "Casco protettivo per giocatori di cricket, in particolare battitori e ricevitori. Protegge dai lanci veloci e dai rimbalzi alti.",
+      "price": 59.9,
+      "stock": 10,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/thumbnail.webp"
+    },
+    {
+      "title": "Wicket da cricket",
+      "description": "Set di tre paletti e due traversine che formano il wicket del cricket. Il battitore lo difende mentre segna punti.",
+      "price": 34.9,
+      "stock": 25,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-wicket/thumbnail.webp"
+    },
+    {
+      "title": "Volani in piuma (6 pz)",
+      "description": "Volani da badminton in piuma naturale, pensati per il gioco veloce: stabili e precisi durante le partite.",
+      "price": 12.9,
+      "stock": 95,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/feather-shuttlecock/thumbnail.webp"
+    },
+    {
+      "title": "Pallone da calcio",
+      "description": "Il pallone regolamentare per il calcio, pensato per tirare e passare durante la partita.",
+      "price": 24.9,
+      "stock": 96,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/football/thumbnail.webp"
+    },
+    {
+      "title": "Palline da golf (3 pz)",
+      "description": "Palline da golf con la superficie a fossette, che garantisce portanza aerodinamica e distanza quando vengono colpite dal bastone.",
+      "price": 9.9,
+      "stock": 84,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/golf-ball/thumbnail.webp"
+    },
+    {
+      "title": "Ferro da golf",
+      "description": "Bastone da golf per molti tipi di colpo. Con testa in metallo pieno, si usa per i colpi di approccio, i chip e altre tecniche.",
+      "price": 79.9,
+      "stock": 90,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/thumbnail.webp"
+    },
+    {
+      "title": "Mazza da baseball in metallo",
+      "description": "Mazza da baseball leggera e resistente in lega metallica, usata in partita e negli allenamenti di battuta.",
+      "price": 39.9,
+      "stock": 16,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/metal-baseball-bat/thumbnail.webp"
+    },
+    {
+      "title": "Palline da tennis (3 pz)",
+      "description": "Palline da tennis regolamentari, pensate per rimbalzare ed essere colpite con la racchetta in partita o in allenamento.",
+      "price": 5.99,
+      "stock": 28,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/thumbnail.webp"
+    },
+    {
+      "title": "Racchetta da tennis",
+      "description": "Attrezzo essenziale del tennis, con telaio incordato e impugnatura per colpire la pallina.",
+      "price": 79.9,
+      "stock": 6,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/thumbnail.webp"
+    },
+    {
+      "title": "Pallone da pallavolo",
+      "description": "Pallone da pallavolo regolamentare, pensato per bagher, palleggi e schiacciate oltre la rete.",
+      "price": 19.9,
+      "stock": 0,
+      "brand": null,
+      "category": "sports-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/thumbnail.webp"
+    },
+    {
+      "title": "Occhiali da sole neri",
+      "description": "Occhiali da sole neri, una scelta classica ed elegante con montatura nera e lenti scure. Proteggono dai raggi UV con stile.",
+      "price": 29.9,
+      "stock": 60,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/thumbnail.webp"
+    },
+    {
+      "title": "Occhiali da sole classici",
+      "description": "Occhiali dal design senza tempo, con montatura neutra e lenti con protezione UV. Versatili e adatti a molte occasioni.",
+      "price": 24.9,
+      "stock": 1,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/thumbnail.webp"
+    },
+    {
+      "title": "Occhiali verdi e neri",
+      "description": "Occhiali dall'abbinamento deciso di verde e nero, per dare vivacità alla tua collezione. Eleganti e d'impatto.",
+      "price": 34.9,
+      "stock": 24,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/thumbnail.webp"
+    },
+    {
+      "title": "Occhiali da festa",
+      "description": "Occhiali pensati per dare carattere al look da festa. Con forme originali o montature colorate, aggiungono un tocco giocoso alle celebrazioni.",
+      "price": 9.9,
+      "stock": 86,
+      "brand": "Fashion Fun",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/thumbnail.webp"
+    },
+    {
+      "title": "Occhiali da sole",
+      "description": "Occhiali da sole dal design semplice e classico, pensati per la funzionalità: protezione UV essenziale con uno stile senza tempo.",
+      "price": 19.9,
+      "stock": 27,
+      "brand": "Fashion Shades",
+      "category": "sunglasses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/thumbnail.webp"
+    },
+    {
+      "title": "iPad mini 2021 galassia",
+      "description": "L'iPad mini 2021 color galassia è un tablet Apple compatto e potente, con splendido display Retina, chip della serie A e design elegante: un'esperienza tablet premium.",
+      "price": 549.0,
+      "stock": 47,
+      "brand": "Apple",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp"
+    },
+    {
+      "title": "Samsung Galaxy Tab S8+ grigio",
+      "description": "Il Samsung Galaxy Tab S8+ grigio è un tablet Android ad alte prestazioni, con grande display AMOLED, processore potente e supporto alla S Pen: ideale per lavoro e intrattenimento.",
+      "price": 699.0,
+      "stock": 62,
+      "brand": "Samsung",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp"
+    },
+    {
+      "title": "Samsung Galaxy Tab bianco",
+      "description": "Il Samsung Galaxy Tab bianco è un tablet Android elegante e versatile, con display brillante, batteria a lunga durata e tante funzioni per ogni attività.",
+      "price": 299.0,
+      "stock": 92,
+      "brand": "Samsung",
+      "category": "tablets",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp"
+    },
+    {
+      "title": "Abito azzurro",
+      "description": "Un abito grazioso ed elegante per molte occasioni. Con il suo azzurro vivace e la linea comoda, aggiunge un tocco di eleganza al guardaroba.",
+      "price": 29.9,
+      "stock": 52,
+      "brand": null,
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp"
+    },
+    {
+      "title": "Vestito estivo da ragazza",
+      "description": "Un vestito carino e leggero pensato per il caldo. Con fantasie allegre e tessuto leggero, è perfetto per stare fresche e alla moda d'estate.",
+      "price": 19.9,
+      "stock": 43,
+      "brand": null,
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/thumbnail.webp"
+    },
+    {
+      "title": "Abito grigio",
+      "description": "Un abito versatile e chic per molte occasioni. Il grigio neutro si adatta a look eleganti o informali: un capo base per chi ama la moda.",
+      "price": 34.9,
+      "stock": 55,
+      "brand": null,
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/gray-dress/thumbnail.webp"
+    },
+    {
+      "title": "Abito corto",
+      "description": "Un abito giovane e di tendenza dalla lunghezza ridotta. Ideale per uscite informali o occasioni speciali, unisce stile e comfort.",
+      "price": 27.9,
+      "stock": 22,
+      "brand": null,
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/short-frock/thumbnail.webp"
+    },
+    {
+      "title": "Abito scozzese",
+      "description": "Un abito con il classico motivo scozzese, che porta un tocco raffinato e senza tempo al guardaroba. Perfetto per autunno e inverno.",
+      "price": 44.9,
+      "stock": 73,
+      "brand": null,
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/tartan-dress/thumbnail.webp"
+    },
+    {
+      "title": "Chrysler 300 Touring",
+      "description": "La Chrysler 300 Touring è una berlina elegante e confortevole, nota per le dotazioni di lusso e la guida fluida.",
+      "price": 42900.0,
+      "stock": 54,
+      "brand": "Chrysler",
+      "category": "vehicle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/300-touring/thumbnail.webp"
+    },
+    {
+      "title": "Dodge Charger SXT RWD",
+      "description": "La Dodge Charger SXT RWD è una berlina sportiva e potente a trazione posteriore, che unisce prestazioni e praticità.",
+      "price": 52900.0,
+      "stock": 57,
+      "brand": "Dodge",
+      "category": "vehicle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/thumbnail.webp"
+    },
+    {
+      "title": "Dodge Hornet GT Plus",
+      "description": "La Dodge Hornet GT Plus è un'auto compatta e agile, perfetta per la città con un tocco sportivo.",
+      "price": 39900.0,
+      "stock": 82,
+      "brand": "Dodge",
+      "category": "vehicle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/thumbnail.webp"
+    },
+    {
+      "title": "Dodge Durango SXT RWD",
+      "description": "La Dodge Durango SXT RWD è un SUV spazioso e versatile, apprezzato per le prestazioni e le dotazioni pensate per la famiglia.",
+      "price": 54900.0,
+      "stock": 95,
+      "brand": "Dodge",
+      "category": "vehicle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/thumbnail.webp"
+    },
+    {
+      "title": "Chrysler Pacifica Touring",
+      "description": "La Chrysler Pacifica Touring è una monovolume elegante e ben accessoriata, comoda e pratica per i viaggi in famiglia.",
+      "price": 49900.0,
+      "stock": 53,
+      "brand": "Chrysler",
+      "category": "vehicle",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/thumbnail.webp"
+    },
+    {
+      "title": "Borsa da donna blu",
+      "description": "Una borsa elegante e capiente per tutti i giorni. Con il suo blu vivace e diversi scomparti, unisce moda e funzionalità.",
+      "price": 49.9,
+      "stock": 76,
+      "brand": "Fashionista",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/thumbnail.webp"
+    },
+    {
+      "title": "Borsa in pelle da donna Heshe",
+      "description": "La borsa in pelle Heshe è un accessorio lussuoso e di alta qualità per la donna raffinata. Dal design senza tempo e realizzata con cura, è versatile e duratura.",
+      "price": 129.0,
+      "stock": 99,
+      "brand": "Heshe",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/thumbnail.webp"
+    },
+    {
+      "title": "Borsa da donna Prada",
+      "description": "La borsa Prada è un'iconica borsa firmata che esprime eleganza e lusso. Realizzata con precisione e con il logo Prada, è un pezzo forte per chi ama la moda.",
+      "price": 2250.0,
+      "stock": 75,
+      "brand": "Prada",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/thumbnail.webp"
+    },
+    {
+      "title": "Zaino in similpelle bianco",
+      "description": "Uno zaino pratico e di tendenza per la donna moderna. Con il design bianco e lineare e tanto spazio, è perfetto per il tempo libero e in viaggio.",
+      "price": 39.9,
+      "stock": 39,
+      "brand": "Urban Chic",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/thumbnail.webp"
+    },
+    {
+      "title": "Borsa da donna nera",
+      "description": "Un accessorio classico e versatile che si abbina a molti outfit. Con il nero senza tempo e un design funzionale, è un must nel guardaroba di ogni donna.",
+      "price": 59.9,
+      "stock": 11,
+      "brand": "Elegance Collection",
+      "category": "womens-bags",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/thumbnail.webp"
+    },
+    {
+      "title": "Abito lungo nero da donna",
+      "description": "Un abito da sera elegante e senza tempo. Con la linea nera essenziale, è perfetto per eventi formali e occasioni speciali.",
+      "price": 149.0,
+      "stock": 25,
+      "brand": null,
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/thumbnail.webp"
+    },
+    {
+      "title": "Corsetto in pelle con gonna",
+      "description": "Un completo deciso e grintoso che abbina un corsetto di stile a una gonna coordinata. Per chi ama la moda d'avanguardia, non passa inosservato.",
+      "price": 119.0,
+      "stock": 30,
+      "brand": null,
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/thumbnail.webp"
+    },
+    {
+      "title": "Corsetto con gonna nera",
+      "description": "Un completo chic e versatile che abbina un corsetto alla moda a una classica gonna nera. Un look coordinato e di tendenza per molte occasioni.",
+      "price": 89.9,
+      "stock": 33,
+      "brand": null,
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/thumbnail.webp"
+    },
+    {
+      "title": "Abito a pois",
+      "description": "Un abito elegante e comodo con fantasia a pois. Perfetto per le uscite informali, aggiunge un tocco allegro al guardaroba di tutti i giorni.",
+      "price": 49.9,
+      "stock": 6,
+      "brand": null,
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/thumbnail.webp"
+    },
+    {
+      "title": "Completo Marni rosso e nero",
+      "description": "Il completo Marni rosso e nero è un abbinamento sofisticato e all'avanguardia. Con i toni rossi e neri, ha un design moderno per un look deciso e sicuro.",
+      "price": 1250.0,
+      "stock": 62,
+      "brand": null,
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/thumbnail.webp"
+    },
+    {
+      "title": "Orecchini con cristallo verde",
+      "description": "Orecchini scintillanti con un vivace cristallo verde. Dal design classico, aggiungono eleganza al look: perfetti per le occasioni formali o speciali.",
+      "price": 29.9,
+      "stock": 54,
+      "brand": null,
+      "category": "womens-jewellery",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/thumbnail.webp"
+    },
+    {
+      "title": "Orecchini ovali verdi",
+      "description": "Orecchini eleganti e versatili dalla particolare forma ovale. Per occasioni informali o eleganti, il verde e il design moderno li rendono speciali.",
+      "price": 24.9,
+      "stock": 73,
+      "brand": null,
+      "category": "womens-jewellery",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/thumbnail.webp"
+    },
+    {
+      "title": "Orecchini tropicali",
+      "description": "Orecchini divertenti e allegri ispirati ai tropici. Con colori vivaci e un design brioso, aggiungono un tocco d'estate al tuo look.",
+      "price": 19.9,
+      "stock": 1,
+      "brand": null,
+      "category": "womens-jewellery",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/thumbnail.webp"
+    },
+    {
+      "title": "Ciabatte nere e marroni",
+      "description": "Ciabatte comode ed eleganti per il tempo libero. L'abbinamento di nero e marrone aggiunge un tocco di stile ai tuoi momenti di relax.",
+      "price": 19.9,
+      "stock": 3,
+      "brand": "Comfort Trends",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/thumbnail.webp"
+    },
+    {
+      "title": "Scarpe con tacco Calvin Klein",
+      "description": "Le scarpe con tacco Calvin Klein sono eleganti e raffinate, pensate per le occasioni formali. Design classico e materiali di qualità completano un look curato.",
+      "price": 119.0,
+      "stock": 93,
+      "brand": "Calvin Klein",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/thumbnail.webp"
+    },
+    {
+      "title": "Scarpe dorate da donna",
+      "description": "Scarpe glamour per le occasioni speciali. Con la tonalità dorata e il design elegante, aggiungono un tocco di lusso all'outfit.",
+      "price": 59.9,
+      "stock": 88,
+      "brand": "Fashion Diva",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/thumbnail.webp"
+    },
+    {
+      "title": "Scarpe Pampi",
+      "description": "Le scarpe Pampi uniscono comfort e stile per tutti i giorni. Dal design versatile, sono adatte a molte occasioni informali per un look rilassato e di tendenza.",
+      "price": 34.9,
+      "stock": 49,
+      "brand": "Pampi",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp"
+    },
+    {
+      "title": "Scarpe rosse",
+      "description": "Scarpe dal rosso acceso che non passano inosservate. Per una festa o un'uscita informale, aggiungono colore e stile al guardaroba.",
+      "price": 39.9,
+      "stock": 7,
+      "brand": "Fashion Express",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/thumbnail.webp"
+    },
+    {
+      "title": "IWC Ingenieur Automatic acciaio",
+      "description": "L'IWC Ingenieur Automatic in acciaio è un orologio robusto e raffinato. Cassa in acciaio inossidabile e movimento automatico uniscono precisione e stile.",
+      "price": 11900.0,
+      "stock": 90,
+      "brand": "IWC",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Cellini Moonphase (donna)",
+      "description": "Il Rolex Cellini Moonphase è un capolavoro di alta orologeria. Con la complicazione delle fasi lunari, mostra la maestria e l'eleganza per cui Rolex è famosa.",
+      "price": 27500.0,
+      "stock": 52,
+      "brand": "Rolex",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/thumbnail.webp"
+    },
+    {
+      "title": "Rolex Datejust (donna)",
+      "description": "Il Rolex Datejust da donna è un orologio iconico. Con un design senza tempo e il datario, unisce eleganza e funzionalità.",
+      "price": 8950.0,
+      "stock": 4,
+      "brand": "Rolex",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/thumbnail.webp"
+    },
+    {
+      "title": "Orologio dorato da donna",
+      "description": "Un accessorio splendido che unisce lusso e stile. Con cassa placcata oro e design chic, aggiunge un tocco glamour a qualsiasi outfit.",
+      "price": 299.0,
+      "stock": 0,
+      "brand": "Fashion Gold",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/thumbnail.webp"
+    },
+    {
+      "title": "Orologio da polso da donna",
+      "description": "Un orologio versatile e alla moda per tutti i giorni. Con cinturino comodo e design semplice ma elegante, si abbina a molti stili.",
+      "price": 89.9,
+      "stock": 12,
+      "brand": "Fashion Co.",
+      "category": "womens-watches",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/thumbnail.webp"
+    }
+  ]
+}

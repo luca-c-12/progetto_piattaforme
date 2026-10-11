@@ -8,10 +8,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestClient;
-import org.springframework.web.client.RestClientException;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.json.JsonMapper;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +24,10 @@ import java.util.List;
 public class PopolamentoDatabase implements CommandLineRunner {
 
     private final ProdottoRepository prodottoRepository;
+    private final ResourceLoader resourceLoader;
+    private final JsonMapper jsonMapper;
 
+    // "classpath:prodotti.json" (file nel JAR) oppure un URL https://... (es. DummyJSON)
     @Value("${popolamento.url}")
     private String url;
 
@@ -30,9 +36,9 @@ public class PopolamentoDatabase implements CommandLineRunner {
         if (prodottoRepository.count() > 0)
             return;
         RispostaDummyJson risposta;
-        try {
-            risposta = RestClient.create().get().uri(url).retrieve().body(RispostaDummyJson.class);
-        } catch (RestClientException e) {
+        try (InputStream in = resourceLoader.getResource(url).getInputStream()) {
+            risposta = jsonMapper.readValue(in, RispostaDummyJson.class);
+        } catch (IOException | JacksonException e) {
             log.warn("Popolamento non riuscito, catalogo vuoto: {}", e.getMessage());
             return;
         }
@@ -41,7 +47,7 @@ public class PopolamentoDatabase implements CommandLineRunner {
         List<Prodotto> prodotti = new ArrayList<>(risposta.products().size());
         for (ProdottoDummyJson p : risposta.products()) {
             if (!valido(p)) {
-                log.warn("Prodotto DummyJSON scartato: {}", p.title());
+                log.warn("Prodotto scartato: {}", p == null ? null : p.title());
                 continue;
             }
             Prodotto prodotto = new Prodotto();
@@ -56,7 +62,7 @@ public class PopolamentoDatabase implements CommandLineRunner {
             prodotti.add(prodotto);
         }
         prodottoRepository.saveAll(prodotti);
-        log.info("Caricati {} prodotti da DummyJSON", prodotti.size());
+        log.info("Caricati {} prodotti da {}", prodotti.size(), url);
     }
 
     private CategoriaProdotto categoria(String categoriaDummy) {
