@@ -115,6 +115,8 @@ public class AstaServiceImpl implements AstaService {
         Prodotto prodotto = caricaProdotto(richiesta.codiceProdotto());
         if(astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(richiesta.codiceProdotto()))
             throw new OperazioneNonValidaException("Esiste già un'asta attiva o programmata per questo prodotto.");
+        prodotto.setVisible(false);
+        prodottoRepository.save(prodotto); //esplicito ma superfluo
         Asta asta = new Asta();
         asta.setProdotto(prodotto);
         asta.setPrezzoBase(richiesta.prezzoBase());
@@ -218,8 +220,8 @@ public class AstaServiceImpl implements AstaService {
     private Prodotto caricaProdotto(long codiceProdotto) {
         Prodotto prodotto = prodottoRepository.findByIdPerAggiornamento(codiceProdotto)
                 .orElseThrow(() -> new RisorsaNonTrovataException("Prodotto non trovato."));
-        if (prodotto.isVisible() || prodotto.getQuantita() == 0)
-            throw new OperazioneNonValidaException("Solo prodotti fuori catalogo e con pezzi disponibili.");
+        if (prodotto.getQuantita() == 0)
+            throw new OperazioneNonValidaException("Solo prodotti con pezzi disponibili.");
         return prodotto;
     }
 }
