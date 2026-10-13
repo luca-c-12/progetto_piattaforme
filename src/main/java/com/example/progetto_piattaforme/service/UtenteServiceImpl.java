@@ -15,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
@@ -70,8 +72,6 @@ public class UtenteServiceImpl implements UtenteService{
     public long trovaOCrea(String keycloakId, String email, String nome, String cognome, Ruolo ruolo) {
         Utente utente = utenteRepository.findByKeycloakId(keycloakId).orElse(null);
         if(utente != null) {
-            if(!utente.isVisible())
-                utente.setVisible(true);
             utente.setNome(nome);
             utente.setCognome(cognome);
             utente.setEmail(email);
@@ -94,6 +94,18 @@ public class UtenteServiceImpl implements UtenteService{
         utente.setVisible(true);
         utenteRepository.save(utente);
         return utente.getIdUtente();
+    }
+
+    @Override
+    public boolean isAttivo(long idUtente) {
+        Optional<Utente> u = utenteRepository.findById(idUtente);
+        return u.map(Utente::isVisible).orElse(false);
+    }
+
+    @Override
+    @Transactional
+    public void riattivaUtente(long idUtente) {
+        caricaCliente(idUtente).setVisible(true);
     }
 
     private Utente caricaUtente(long idUtente) {

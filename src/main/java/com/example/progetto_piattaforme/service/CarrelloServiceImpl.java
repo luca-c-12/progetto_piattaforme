@@ -69,6 +69,10 @@ public class CarrelloServiceImpl implements CarrelloService {
         Carrello carrello = caricaCarrello(idCliente);
         RecordCarrello riga = caricaRiga(carrello, codiceProdotto);
 
+        // un prodotto tolto dal catalogo si può solo diminuire o togliere, non aumentare
+        if (!riga.getProdotto().isVisible() && quantita > riga.getQuantita())
+            throw new OperazioneNonValidaException(riga.getProdotto().getNome() + " non è più disponibile.");
+
         verificaGiacenza(riga.getProdotto(), quantita);
         riga.setQuantita(quantita);
 

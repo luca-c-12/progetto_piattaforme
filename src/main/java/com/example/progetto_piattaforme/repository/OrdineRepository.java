@@ -18,6 +18,7 @@ public interface OrdineRepository extends JpaRepository<Ordine, Long> {
     @EntityGraph(attributePaths = {"prodottiAcquistati", "prodottiAcquistati.prodotto"})
     Optional<Ordine> findByIdOrdineAndCliente_IdUtente(long idOrdine, long idUtente);
 
+    @EntityGraph(attributePaths = "cliente")
     Page<Ordine> findByDataOrdineBetween(LocalDateTime dal, LocalDateTime al, Pageable paginazione);
 
     @Override

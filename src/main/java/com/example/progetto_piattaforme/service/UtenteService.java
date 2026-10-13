@@ -24,4 +24,8 @@ public interface UtenteService {
     Page<UtenteDTO> getUtenti(Pageable paginazione);
 
     long trovaOCrea(String keycloakId, String email, String nome, String cognome, Ruolo ruolo);
+
+    boolean isAttivo(long idUtente);
+
+    void riattivaUtente(long idUtente);
 }

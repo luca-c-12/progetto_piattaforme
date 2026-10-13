@@ -8,12 +8,17 @@ import java.time.LocalDateTime;
 public record OrdineSintesiDTO(
         long idOrdine,
         LocalDateTime dataOrdine,
-        BigDecimal totalePagato
+        BigDecimal totalePagato,
+        long idCliente,
+        String nomeCliente
+
 ) {
     public static OrdineSintesiDTO from(Ordine o) {
         return new OrdineSintesiDTO(
                 o.getIdOrdine(),
                 o.getDataOrdine(),
-                o.getTotalePagato());
+                o.getTotalePagato(),
+                o.getCliente().getIdUtente(),
+                (o.getCliente().getNome() + " " + o.getCliente().getCognome()).trim());
     }
 }

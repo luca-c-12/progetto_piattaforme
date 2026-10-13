@@ -20,8 +20,14 @@ public class UtenteCorrente {
 
     private final UtenteService utenteService;
 
-
     public long id() {
+        long id = idAncheDisattivato();
+        if (!utenteService.isAttivo(id))
+            throw new AccessoNonAutorizzatoException("Account disattivato: accedi di nuovo per riattivarlo.");
+        return id;
+    }
+
+    public long idAncheDisattivato() {
         Authentication autenticazione = SecurityContextHolder.getContext().getAuthentication();
         if (!(autenticazione instanceof JwtAuthenticationToken tokenAutenticato))
             throw new AccessoNonAutorizzatoException("Utente non identificato.");

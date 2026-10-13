@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequiredArgsConstructor
 public class UtenteController {
@@ -58,5 +60,18 @@ public class UtenteController {
     @PreAuthorize("hasRole('ADMIN')")
     public UtenteDTO getUtente(@PathVariable long idUtente) {
         return utenteService.getUtente(idUtente);
+    }
+
+    @GetMapping("/utenti/me/stato")
+    @PreAuthorize("hasRole('CLIENTE')")
+    public Map<String, Boolean> statoAccount() {
+        return Map.of("attivo", utenteService.isAttivo(utenteCorrente.idAncheDisattivato()));
+    }
+
+    @PostMapping("/utenti/me/riattiva")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('CLIENTE')")
+    public void riattivaAccount() {
+        utenteService.riattivaUtente(utenteCorrente.idAncheDisattivato());
     }
 }
