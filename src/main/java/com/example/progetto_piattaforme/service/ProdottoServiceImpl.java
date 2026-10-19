@@ -62,7 +62,7 @@ public class ProdottoServiceImpl implements ProdottoService {
     @Override
     @Transactional
     public ProdottoAdminDTO aggiornaProdotto(long codiceProdotto, AggiornaProdottoRequest richiesta) {
-        Prodotto prodotto = caricaProdotto(codiceProdotto);
+        Prodotto prodotto = caricaProdottoPerAggiornamento(codiceProdotto);
         prodotto.setNome(richiesta.nome());
         prodotto.setDescrizione(richiesta.descrizione());
         prodotto.setPrezzo(richiesta.prezzo());
@@ -76,11 +76,11 @@ public class ProdottoServiceImpl implements ProdottoService {
     @Override
     @Transactional
     public ProdottoAdminDTO impostaGiacenza(long codiceProdotto, int quantita) {
-        if (astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(codiceProdotto))
-            throw new OperazioneNonValidaException("Non si può modificare la giacenza di un prodotto all'asta.");
         if (quantita < 0)
             throw new OperazioneNonValidaException("Quantità non valida.");
-        Prodotto prodotto = caricaProdotto(codiceProdotto);
+        Prodotto prodotto = caricaProdottoPerAggiornamento(codiceProdotto);
+        if (astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(codiceProdotto))
+            throw new OperazioneNonValidaException("Non si può modificare la giacenza di un prodotto all'asta.");
         prodotto.setQuantita(quantita);
         return ProdottoAdminDTO.from(prodotto);
     }
@@ -88,7 +88,7 @@ public class ProdottoServiceImpl implements ProdottoService {
     @Override
     @Transactional
     public ProdottoAdminDTO impostaVisibilita(long codiceProdotto, boolean visibile) {
-        Prodotto prodotto = caricaProdotto(codiceProdotto);
+        Prodotto prodotto = caricaProdottoPerAggiornamento(codiceProdotto);
         if (visibile && astaRepository.existsByProdotto_CodiceProdottoAndChiusaFalse(codiceProdotto))
             throw new OperazioneNonValidaException("Un prodotto all'asta non può essere visibile nel catalogo.");
         prodotto.setVisible(visibile);
@@ -106,5 +106,10 @@ public class ProdottoServiceImpl implements ProdottoService {
         if (!prodotto.isVisible() || prodotto.getQuantita() == 0)
             throw new RisorsaNonTrovataException("Prodotto non trovato.");
         return prodotto;
+    }
+
+    private Prodotto caricaProdottoPerAggiornamento(long codiceProdotto) {
+        return prodottoRepository.findByIdPerAggiornamento(codiceProdotto)
+                .orElseThrow(() -> new RisorsaNonTrovataException("Prodotto non trovato."));
     }
 }

@@ -150,6 +150,7 @@ public class AstaServiceImpl implements AstaService {
     @Transactional
     public void chiudiAsta(long idAsta) {
         Asta asta = caricaAstaPerAggiornamento(idAsta);
+        if (asta.isChiusa()) return;
         LocalDateTime adesso = LocalDateTime.now();
         if(asta.statoAl(adesso) == StatoAsta.TERMINATA) {
             asta.setVisible(false);

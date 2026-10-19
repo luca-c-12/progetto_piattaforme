@@ -38,13 +38,12 @@ public class Asta {
     @OneToMany(mappedBy = "asta", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<OffertaAsta> offerteRicevute = new ArrayList<>();
 
-   // @ManyToOne(fetch = FetchType.LAZY) //sarebbe semanticamente un one to one, ma si fa many to one per fetch lazy
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "offerta_max")
     private OffertaAsta offertaMax;
 
     @Column(name = "chiusa", nullable = false)
-    private boolean chiusa;  // true quando il job l'ha elaborata
+    private boolean chiusa;  // true quando l'asta è stata elaborata dal job o annullata
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_vincitore")
